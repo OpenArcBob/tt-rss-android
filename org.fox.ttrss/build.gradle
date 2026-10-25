@@ -22,16 +22,6 @@ android {
         ]
     }
 
-    applicationVariants.all { variant ->
-        variant.outputs.all { output ->
-            def versionName = variant.versionName
-            def buildType = variant.name 
-            def timestamp = new Date().format('yyyyMMdd-HHmmss')
-            
-            outputFileName = "ttrss-android-${versionName}-${buildType}-${timestamp}.apk"
-        }
-    }
-
     signingConfigs {
         debug {
             def keystorePath = System.getenv("DEBUG_KEYSTORE_PATH") ?: "${System.getProperty('user.home')}/.android/debug.keystore"
