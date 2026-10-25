@@ -30,7 +30,7 @@ public class CategoryDrawerLayout extends DrawerLayout {
         // Material's NavigationView must not register its drawer-closing overlay
         // callback: it would mask FragmentManager and the system's exit preview.
         // Only exclude the container itself; descendants keep their normal dispatchers.
-        if (child == requester && requester.getId() == R.id.modal_navigation_view) return null;
+        if (child.equals(requester) && requester.getId() == R.id.modal_navigation_view) return null;
         return super.findOnBackInvokedDispatcherForChild(child, requester);
     }
 
