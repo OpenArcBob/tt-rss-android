@@ -8,7 +8,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "org.fox.ttrss"
+        applicationId = "ai.openarcbob.ttrss"
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
         minSdkVersion 24
         //noinspection ExpiredTargetSdkVersion
@@ -20,6 +20,16 @@ android {
         manifestPlaceholders = [
             appIcon: "@mipmap/ic_launcher"
         ]
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def versionName = variant.versionName
+            def buildType = variant.name 
+            def timestamp = new Date().format('yyyyMMdd-HHmmss')
+            
+            outputFileName = "ttrss-android-${versionName}-${buildType}-${timestamp}.apk"
+        }
     }
 
     signingConfigs {
