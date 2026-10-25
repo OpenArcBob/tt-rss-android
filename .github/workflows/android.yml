@@ -24,3 +24,8 @@ jobs:
       run: chmod +x gradlew
     - name: Build Debug APK
       run: ./gradlew assembleDebug
+    - name: Upload Debug APK
+      uses: actions/upload-artifact@v5
+      with:
+        name: debug-apk
+        path: '**/build/outputs/apk/debug/*.apk'
