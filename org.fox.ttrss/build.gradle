@@ -8,7 +8,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "ai.openarcbob.ttrss"
+        applicationId = "org.fox.ttrss"
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
         minSdkVersion 24
         //noinspection ExpiredTargetSdkVersion
