@@ -10,7 +10,7 @@ android {
     defaultConfig {
         applicationId = "ai.openarcbob.ttrss"
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
-        minSdkVersion 30
+        minSdkVersion 24
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 36
         compileSdkVersion = 37
