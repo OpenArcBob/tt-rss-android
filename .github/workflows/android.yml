@@ -28,10 +28,10 @@ jobs:
       run: |
         TIMESTAMP=$(date +'%Y%m%d-%H%M')
         mkdir -p build/apk-release
-        find . -name "*-debug.apk" -exec cp {} build/apk-release/ttrss-debug-${{ github.sha }}-$TIMESTAMP.apk \;
+        find . -name "*-debug.apk" -exec cp {} build/apk-release/tt-rss-android-$TIMESTAMP-${{ github.sha }}.apk \;
 
     - name: Upload Debug APK
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
-        name: debug-apk-${{ github.sha }}
+        name: tt-rss-android-${{ github.sha }}
         path: build/apk-release/*.apk
