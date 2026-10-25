@@ -24,8 +24,14 @@ jobs:
       run: chmod +x gradlew
     - name: Build Debug APK
       run: ./gradlew assembleDebug
+    - name: Prepare APK with Timestamp
+      run: |
+        TIMESTAMP=$(date +'%Y%m%d-%H%M')
+        mkdir -p build/apk-release
+        find . -name "*-debug.apk" -exec cp {} build/apk-release/ttrss-debug-${{ github.sha }}-$TIMESTAMP.apk \;
+
     - name: Upload Debug APK
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v4
       with:
-        name: debug-apk
-        path: '**/build/outputs/apk/debug/*.apk'
+        name: debug-apk-${{ github.sha }}
+        path: build/apk-release/*.apk
