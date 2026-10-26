@@ -3,11 +3,13 @@
         <item>@string/theme_follow_device</item>
         <item>@string/theme_light</item>
         <item>@string/theme_dark</item>
+        <item>@string/theme_yellowblack</item>
     </string-array>
     <string-array name="pref_theme_values" translatable="false">
         <item>THEME_FOLLOW_DEVICE</item>
         <item>THEME_LIGHT</item>
         <item>THEME_DARK</item>
+        <item>THEME_YELLOWBLACK</item>
     </string-array>
     <string-array name="headline_mode_names">
         <item>@string/headline_display_mode_default</item>

@@ -10,6 +10,7 @@ import androidx.core.os.BundleCompat;
 import androidx.preference.PreferenceManager;
 
 import com.google.android.material.color.DynamicColors;
+import com.google.android.material.color.DynamicColorsOptions;
 
 import org.acra.ACRA;
 import org.acra.ReportField;
@@ -61,7 +62,15 @@ public class Application extends android.app.Application {
     public final void onCreate() {
         super.onCreate();
 
-        DynamicColors.applyToActivitiesIfAvailable(this);
+        DynamicColors.applyToActivitiesIfAvailable(this, new DynamicColorsOptions.Builder()
+                .setPrecondition((activity, theme) -> {
+                    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+                    String currentTheme = prefs.getString("theme", CommonActivity.THEME_DEFAULT);
+                    return prefs.getBoolean("enable_dynamic_colors", false)
+                            && !CommonActivity.THEME_YELLOWBLACK.equals(currentTheme)
+                            && !"yellowblack".equalsIgnoreCase(currentTheme);
+                })
+                .build());
 
         m_singleton = this;
         m_cmgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

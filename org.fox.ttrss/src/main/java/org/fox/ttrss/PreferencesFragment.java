@@ -61,7 +61,9 @@ public class PreferencesFragment extends PreferenceFragmentCompat {
             return false;
         });
 
-        findPreference("enable_dynamic_colors").setEnabled(DynamicColors.isDynamicColorAvailable());
+        String currentTheme = prefs.getString("theme", CommonActivity.THEME_DEFAULT);
+        boolean isYellowBlack = CommonActivity.THEME_YELLOWBLACK.equals(currentTheme) || "yellowblack".equalsIgnoreCase(currentTheme);
+        findPreference("enable_dynamic_colors").setEnabled(DynamicColors.isDynamicColorAvailable() && !isYellowBlack);
 
         findPreference("network_settings").setOnPreferenceClickListener(preference -> {
             getActivity().getSupportFragmentManager()

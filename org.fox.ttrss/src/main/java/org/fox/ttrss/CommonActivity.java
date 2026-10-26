@@ -71,6 +71,7 @@ public class CommonActivity extends AppCompatActivity implements SharedPreferenc
     public final static String FRAG_CATS = "cats";
 
     public final static String THEME_DEFAULT = "THEME_FOLLOW_DEVICE";
+    public final static String THEME_YELLOWBLACK = "THEME_YELLOWBLACK";
 
     public final static String NOTIFICATION_CHANNEL_NORMAL = "channel_normal";
     public final static String NOTIFICATION_CHANNEL_PRIORITY = "channel_priority";
@@ -295,11 +296,15 @@ public class CommonActivity extends AppCompatActivity implements SharedPreferenc
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         } else if ("THEME_LIGHT".equals(theme)) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        } else if (THEME_YELLOWBLACK.equals(theme) || "yellowblack".equalsIgnoreCase(theme)) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
         }
 
-        if (prefs.getBoolean("enable_dynamic_colors", false))
+        if (THEME_YELLOWBLACK.equals(theme) || "yellowblack".equalsIgnoreCase(theme))
+            setTheme(R.style.AppTheme_YellowBlack);
+        else if (prefs.getBoolean("enable_dynamic_colors", false))
             setTheme(R.style.AppTheme_Dynamic);
         else
             setTheme(R.style.AppTheme);
@@ -311,9 +316,10 @@ public class CommonActivity extends AppCompatActivity implements SharedPreferenc
 
         if ("theme".equals(key)) {
             setAppTheme(sharedPreferences);
+            recreate();
         }
 
-        String[] filter = new String[]{"headline_mode", "enable_dynamic_colors", "enable_cats", "widget_update_interval",
+        String[] filter = new String[]{"theme", "headline_mode", "enable_dynamic_colors", "enable_cats", "widget_update_interval",
                 "headlines_swipe_to_dismiss", "headlines_mark_read_scroll", "headlines_request_size",
                 "force_phone_layout", "open_on_startup", "window_secure_mode", "enable_icon_tinting"};
 

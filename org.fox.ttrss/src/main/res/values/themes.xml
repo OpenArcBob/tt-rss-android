@@ -53,4 +53,63 @@
         <item name="colorSurfaceContainerHigh">@color/md_theme_surfaceContainerHigh</item>
         <item name="colorSurfaceContainerHighest">@color/md_theme_surfaceContainerHighest</item>
     </style>
+
+    <style name="AppTheme.YellowBlack" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="windowActionModeOverlay">true</item>
+        <item name="preferenceTheme">@style/AppPreferenceThemeOverlay</item>
+
+        <item name="android:colorBackground">@color/yb_theme_background</item>
+        <item name="android:windowBackground">@color/yb_theme_background</item>
+        <item name="android:textColorPrimary">@color/yb_theme_onSurface</item>
+        <item name="android:textColorSecondary">@color/yb_theme_onSurfaceVariant</item>
+        <item name="android:textColorTertiary">@color/yb_theme_tertiary</item>
+        <item name="android:textColorHighlight">#66FFE500</item>
+        <item name="android:textColorLink">@color/yb_theme_primary</item>
+
+        <item name="colorPrimary">@color/yb_theme_primary</item>
+        <item name="colorOnPrimary">@color/yb_theme_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/yb_theme_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/yb_theme_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/yb_theme_secondary</item>
+        <item name="colorOnSecondary">@color/yb_theme_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/yb_theme_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/yb_theme_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/yb_theme_tertiary</item>
+        <item name="colorOnTertiary">@color/yb_theme_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/yb_theme_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/yb_theme_onTertiaryContainer</item>
+        <item name="colorError">@color/yb_theme_error</item>
+        <item name="colorOnError">@color/yb_theme_onError</item>
+        <item name="colorErrorContainer">@color/yb_theme_errorContainer</item>
+        <item name="colorOnErrorContainer">@color/yb_theme_onErrorContainer</item>
+        <item name="colorOnBackground">@color/yb_theme_onBackground</item>
+        <item name="colorSurface">@color/yb_theme_surface</item>
+        <item name="colorOnSurface">@color/yb_theme_onSurface</item>
+        <item name="colorSurfaceVariant">@color/yb_theme_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/yb_theme_onSurfaceVariant</item>
+        <item name="colorOutline">@color/yb_theme_outline</item>
+        <item name="colorOutlineVariant">@color/yb_theme_outlineVariant</item>
+        <item name="colorSurfaceInverse">@color/yb_theme_inverseSurface</item>
+        <item name="colorOnSurfaceInverse">@color/yb_theme_inverseOnSurface</item>
+        <item name="colorPrimaryInverse">@color/yb_theme_inversePrimary</item>
+        <item name="colorPrimaryFixed">@color/yb_theme_primaryFixed</item>
+        <item name="colorOnPrimaryFixed">@color/yb_theme_onPrimaryFixed</item>
+        <item name="colorPrimaryFixedDim">@color/yb_theme_primaryFixedDim</item>
+        <item name="colorOnPrimaryFixedVariant">@color/yb_theme_onPrimaryFixedVariant</item>
+        <item name="colorSecondaryFixed">@color/yb_theme_secondaryFixed</item>
+        <item name="colorOnSecondaryFixed">@color/yb_theme_onSecondaryFixed</item>
+        <item name="colorSecondaryFixedDim">@color/yb_theme_secondaryFixedDim</item>
+        <item name="colorOnSecondaryFixedVariant">@color/yb_theme_onSecondaryFixedVariant</item>
+        <item name="colorTertiaryFixed">@color/yb_theme_tertiaryFixed</item>
+        <item name="colorOnTertiaryFixed">@color/yb_theme_onTertiaryFixed</item>
+        <item name="colorTertiaryFixedDim">@color/yb_theme_tertiaryFixedDim</item>
+        <item name="colorOnTertiaryFixedVariant">@color/yb_theme_onTertiaryFixedVariant</item>
+        <item name="colorSurfaceDim">@color/yb_theme_surfaceDim</item>
+        <item name="colorSurfaceBright">@color/yb_theme_surfaceBright</item>
+        <item name="colorSurfaceContainerLowest">@color/yb_theme_surfaceContainerLowest</item>
+        <item name="colorSurfaceContainerLow">@color/yb_theme_surfaceContainerLow</item>
+        <item name="colorSurfaceContainer">@color/yb_theme_surfaceContainer</item>
+        <item name="colorSurfaceContainerHigh">@color/yb_theme_surfaceContainerHigh</item>
+        <item name="colorSurfaceContainerHighest">@color/yb_theme_surfaceContainerHighest</item>
+    </style>
 </resources>

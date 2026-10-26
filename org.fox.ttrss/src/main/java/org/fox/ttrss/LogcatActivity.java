@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.preference.PreferenceManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.io.BufferedReader;
@@ -25,7 +26,8 @@ public class LogcatActivity extends CommonActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-        setTheme(R.style.AppTheme);
+        m_prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        setAppTheme(m_prefs);
 
         super.onCreate(savedInstanceState);
 
