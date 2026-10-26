@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="login_in_progress">Logging in…</string>
-    <string name="app_name" translatable="false">Tiny Tiny RSS</string>
+    <string name="app_name" translatable="false">ttrssa</string>
     <string name="login_need_configure">Please configure the application first.</string>
     <string name="login_ready">Ready to login.</string>
     <string name="login_login">Log in</string>
