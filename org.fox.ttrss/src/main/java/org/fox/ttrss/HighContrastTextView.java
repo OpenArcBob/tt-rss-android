@@ -1,11 +1,15 @@
 package org.fox.ttrss;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.text.Layout;
+import android.text.TextPaint;
 import android.util.AttributeSet;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,13 +17,16 @@ import androidx.annotation.Nullable;
 import com.google.android.material.textview.MaterialTextView;
 
 /**
- * A TextView that bypasses system-level High Contrast Text (which forcefully overrides
- * TextView font colors to white with black outline in hardware-accelerated HWUI rendering)
- * by forcing software-layer rendering and offscreen bitmap rasterization.
- * This guarantees the exact text color (e.g. Samsung High Contrast Yellow #FFFF00) is preserved.
+ * A TextView that unconditionally forces Samsung High Contrast Yellow (#FFFF00)
+ * and bypasses system/OEM high-contrast font hooks (which forcefully override text
+ * to white with black outline in hardware-accelerated HWUI rendering) by rendering
+ * glyph geometry directly as vector Paths or via an offscreen software bitmap.
  */
 public class HighContrastTextView extends MaterialTextView {
 
+    public static final int HIGH_CONTRAST_YELLOW = 0xFFFFFF00;
+
+    private final Path mTextPath = new Path();
     private Bitmap mBitmap;
     private Canvas mBitmapCanvas;
 
@@ -39,26 +46,76 @@ public class HighContrastTextView extends MaterialTextView {
     }
 
     private void init() {
-        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+        super.setTextColor(ColorStateList.valueOf(HIGH_CONTRAST_YELLOW));
     }
 
     @Override
-    protected void onAttachedToWindow() {
-        super.onAttachedToWindow();
-        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+    public void setTextColor(int color) {
+        super.setTextColor(HIGH_CONTRAST_YELLOW);
+    }
+
+    @Override
+    public void setTextColor(ColorStateList colors) {
+        super.setTextColor(ColorStateList.valueOf(HIGH_CONTRAST_YELLOW));
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        // If rendered via software layer (the default due to setLayerType),
-        // canvas.isHardwareAccelerated() is false and Skia CPU preserves pure colors.
-        if (!canvas.isHardwareAccelerated() || getWidth() <= 0 || getHeight() <= 0) {
+        super.setTextColor(ColorStateList.valueOf(HIGH_CONTRAST_YELLOW));
+
+        if (getWidth() <= 0 || getHeight() <= 0) {
             super.onDraw(canvas);
             return;
         }
 
-        // If hardware acceleration is forced by parent/OEM, draw via offscreen software bitmap
-        // because HWUI never alters bitmap pixels with high contrast text overrides.
+        Layout layout = getLayout();
+        if (layout != null) {
+            try {
+                TextPaint paint = getPaint();
+                paint.setColor(HIGH_CONTRAST_YELLOW);
+                paint.setStyle(Paint.Style.FILL);
+
+                int saveCount = canvas.save();
+                canvas.translate(getCompoundPaddingLeft(), getExtendedPaddingTop());
+
+                CharSequence text = layout.getText();
+                String textStr = text != null ? text.toString() : "";
+                int lineCount = layout.getLineCount();
+
+                for (int i = 0; i < lineCount; i++) {
+                    int start = layout.getLineStart(i);
+                    int end = layout.getLineVisibleEnd(i);
+                    int ellipsisCount = layout.getEllipsisCount(i);
+
+                    float x = layout.getLineLeft(i);
+                    float baseline = layout.getLineBaseline(i);
+
+                    if (ellipsisCount > 0) {
+                        int ellipsisStart = layout.getEllipsisStart(i);
+                        int visibleEnd = start + ellipsisStart;
+                        if (visibleEnd > start && visibleEnd <= textStr.length()) {
+                            mTextPath.reset();
+                            paint.getTextPath(textStr, start, visibleEnd, x, baseline, mTextPath);
+                            canvas.drawPath(mTextPath, paint);
+                        }
+                        float ellipsisX = x + (visibleEnd > start ? layout.getPrimaryHorizontal(visibleEnd) - x : 0);
+                        mTextPath.reset();
+                        paint.getTextPath("\u2026", 0, 1, ellipsisX, baseline, mTextPath);
+                        canvas.drawPath(mTextPath, paint);
+                    } else if (end > start && end <= textStr.length()) {
+                        mTextPath.reset();
+                        paint.getTextPath(textStr, start, end, x, baseline, mTextPath);
+                        canvas.drawPath(mTextPath, paint);
+                    }
+                }
+
+                canvas.restoreToCount(saveCount);
+                return;
+            } catch (Throwable ignored) {
+            }
+        }
+
+        // Fallback: Offscreen software bitmap rendering
         try {
             int width = getWidth();
             int height = getHeight();

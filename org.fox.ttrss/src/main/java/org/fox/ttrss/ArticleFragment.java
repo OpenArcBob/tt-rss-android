@@ -109,6 +109,7 @@ public class ArticleFragment extends androidx.fragment.app.Fragment {
         TextView title = view.findViewById(R.id.title);
 
         if (title != null) {
+            title.setTextColor(0xFFFFFF00);
 
             title.setTextSize(TypedValue.COMPLEX_UNIT_SP, Math.min(21, m_articleFontSize + 3));
 
@@ -135,6 +136,7 @@ public class ArticleFragment extends androidx.fragment.app.Fragment {
         TextView comments = view.findViewById(R.id.comments);
 
         if (comments != null) {
+            comments.setTextColor(0xFFFFFF00);
             if (m_activity.getApiLevel() >= 4 && m_article.comments_count > 0) {
                 comments.setTextSize(TypedValue.COMPLEX_UNIT_SP, m_articleSmallFontSize);
 
@@ -162,6 +164,7 @@ public class ArticleFragment extends androidx.fragment.app.Fragment {
         TextView linkHost = view.findViewById(R.id.link_host);
 
         if (linkHost != null) {
+            linkHost.setTextColor(0xFFFFFF00);
             if (m_article.isHostDistinct()) {
                 linkHost.setText(m_article.getLinkHost());
                 linkHost.setVisibility(View.VISIBLE);
@@ -174,6 +177,7 @@ public class ArticleFragment extends androidx.fragment.app.Fragment {
         View noteContainer = view.findViewById(R.id.note_container);
 
         if (note != null && noteContainer != null) {
+            note.setTextColor(0xFFFFFF00);
             if (!m_article.note.isEmpty()) {
                 note.setTextSize(TypedValue.COMPLEX_UNIT_SP, m_articleSmallFontSize);
                 note.setText(m_article.note);
@@ -188,6 +192,7 @@ public class ArticleFragment extends androidx.fragment.app.Fragment {
         TextView dv = view.findViewById(R.id.date);
 
         if (dv != null) {
+            dv.setTextColor(0xFFFFFF00);
             dv.setTextSize(TypedValue.COMPLEX_UNIT_SP, m_articleSmallFontSize);
 
             Date d = new Date(m_article.updated * 1000L);
@@ -203,6 +208,7 @@ public class ArticleFragment extends androidx.fragment.app.Fragment {
         TextView tagv = view.findViewById(R.id.tags);
 
         if (tagv != null) {
+            tagv.setTextColor(0xFFFFFF00);
             tagv.setTextSize(TypedValue.COMPLEX_UNIT_SP, m_articleSmallFontSize);
 
             if (m_article.feed_title != null) {
@@ -278,17 +284,9 @@ public class ArticleFragment extends androidx.fragment.app.Fragment {
         ws.setBuiltInZoomControls(true);
         ws.setDisplayZoomControls(false);
 
-        TypedValue tvTextColor = new TypedValue();
-        getActivity().getTheme().resolveAttribute(R.attr.colorOnSurface, tvTextColor, true);
-
-        String textColor = String.format("#%06X", (0xFFFFFF & tvTextColor.data));
-
+        String textColor = "#FFFF00";
+        String linkHexColor = "#FFFF00";
         String cssOverride = "body { color : " + textColor + "; }";
-
-        TypedValue tvColorPrimary = new TypedValue();
-        getActivity().getTheme().resolveAttribute(R.attr.colorPrimary, tvColorPrimary, true);
-
-        String linkHexColor = String.format("#%06X", (0xFFFFFF & tvColorPrimary.data));
         cssOverride += " a:link {color: " + linkHexColor + ";} a:visited { color: " + linkHexColor + ";}";
 
         String articleContent = m_article.content;

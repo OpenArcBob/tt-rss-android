@@ -288,26 +288,8 @@ public class CommonActivity extends AppCompatActivity implements SharedPreferenc
     }
 
     protected void setAppTheme(SharedPreferences prefs) {
-        String theme = prefs.getString("theme", CommonActivity.THEME_DEFAULT);
-
-        Log.d(TAG, "setting theme to: " + theme);
-
-        if ("THEME_DARK".equals(theme)) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else if ("THEME_LIGHT".equals(theme)) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        } else if (THEME_YELLOWBLACK.equals(theme) || "yellowblack".equalsIgnoreCase(theme)) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
-        }
-
-        if (THEME_YELLOWBLACK.equals(theme) || "yellowblack".equalsIgnoreCase(theme))
-            setTheme(R.style.AppTheme_YellowBlack);
-        else if (prefs.getBoolean("enable_dynamic_colors", false))
-            setTheme(R.style.AppTheme_Dynamic);
-        else
-            setTheme(R.style.AppTheme);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        setTheme(R.style.AppTheme_YellowBlack);
     }
 
     @Override

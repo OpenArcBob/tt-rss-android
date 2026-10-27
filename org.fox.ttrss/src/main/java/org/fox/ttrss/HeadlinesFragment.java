@@ -772,19 +772,19 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
             String headlineMode = m_prefs.getString("headline_mode", "HL_DEFAULT");
             m_flavorImageEnabled = "HL_DEFAULT".equals(headlineMode) || "HL_COMPACT".equals(headlineMode) || "HL_SPLIT".equals(headlineMode);
 
-            m_colorPrimary = colorFromAttr(R.attr.colorPrimary);
-            m_colorSecondary = colorFromAttr(R.attr.colorSecondary);
-            m_colorTertiary = colorFromAttr(R.attr.colorTertiary);
+            m_colorPrimary = 0xFFFFFF00;
+            m_colorSecondary = 0xFFFFFF00;
+            m_colorTertiary = 0xFFFFFF00;
 
             m_cslTertiary = ColorStateList.valueOf(m_colorTertiary);
             m_cslPrimary = ColorStateList.valueOf(m_colorPrimary);
 
             m_colorSurfaceContainerLowest = colorFromAttr(R.attr.colorSurfaceContainerLowest);
             m_colorSurface = colorFromAttr(R.attr.colorSurface);
-            m_colorOnSurface = colorFromAttr(R.attr.colorOnSurface);
+            m_colorOnSurface = 0xFFFFFF00;
 
             m_colorTertiaryContainer = colorFromAttr(R.attr.colorTertiaryContainer);
-            m_colorOnTertiaryContainer = colorFromAttr(R.attr.colorOnTertiaryContainer);
+            m_colorOnTertiaryContainer = 0xFFFFFF00;
 
             m_headlineFontSize = m_prefs.getInt("headlines_font_size_sp_int", 13);
             m_headlineSmallFontSize = Math.max(10, Math.min(18, m_headlineFontSize - 2));
@@ -1098,7 +1098,7 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
 
             if (holder.titleView != null) {
                 holder.titleView.setTypeface(null, article.unread ? Typeface.BOLD : Typeface.NORMAL);
-                holder.titleView.setTextColor(article.unread ? m_colorOnSurface : m_colorPrimary);
+                holder.titleView.setTextColor(0xFFFFFF00);
             }
 
             updateActiveView(article, holder);
@@ -1110,16 +1110,16 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
                     holder.view.setBackgroundColor(m_colorTertiaryContainer);
 
                     if (holder.titleView != null) {
-                        holder.titleView.setTextColor(m_colorOnTertiaryContainer);
+                        holder.titleView.setTextColor(0xFFFFFF00);
                     }
                 }
 
                 if (holder.excerptView != null) {
-                    holder.excerptView.setTextColor(article.active ? m_colorOnTertiaryContainer : m_colorOnSurface);
+                    holder.excerptView.setTextColor(0xFFFFFF00);
                 }
 
                 if (holder.feedTitleView != null) {
-                    holder.feedTitleView.setTextColor(article.active ? m_colorOnTertiaryContainer : m_colorSecondary);
+                    holder.feedTitleView.setTextColor(0xFFFFFF00);
                 }
             }
         }
@@ -1151,6 +1151,13 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
             updateAuthorView(article, holder);
             updateDateView(article, holder);
             updateSelectedView(article, holder);
+
+            if (holder.titleView != null) holder.titleView.setTextColor(0xFFFFFF00);
+            if (holder.feedTitleView != null) holder.feedTitleView.setTextColor(0xFFFFFF00);
+            if (holder.excerptView != null) holder.excerptView.setTextColor(0xFFFFFF00);
+            if (holder.authorView != null) holder.authorView.setTextColor(0xFFFFFF00);
+            if (holder.dateView != null) holder.dateView.setTextColor(0xFFFFFF00);
+            if (holder.linkHost != null) holder.linkHost.setTextColor(0xFFFFFF00);
 
             if (!m_compactLayoutMode && holder.flavorImageHolder != null) {
 
