@@ -1,24 +1,21 @@
 package org.fox.ttrss;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.provider.Settings;
 import android.util.AttributeSet;
-import android.view.accessibility.AccessibilityManager;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.preference.PreferenceManager;
 
 import com.google.android.material.textview.MaterialTextView;
 
 /**
  * A TextView that bypasses system-level High Contrast Text (which forcefully overrides
  * TextView font colors to white with black outline in hardware-accelerated HWUI rendering)
- * by rendering its layout into a software bitmap buffer before drawing to the canvas.
+ * by forcing software-layer rendering and offscreen bitmap rasterization.
  * This guarantees the exact text color (e.g. Samsung High Contrast Yellow #FFFF00) is preserved.
  */
 public class HighContrastTextView extends MaterialTextView {
@@ -28,64 +25,40 @@ public class HighContrastTextView extends MaterialTextView {
 
     public HighContrastTextView(@NonNull Context context) {
         super(context);
+        init();
     }
 
     public HighContrastTextView(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     public HighContrastTextView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
     }
 
-    private boolean isHighTextContrastActive() {
-        try {
-            AccessibilityManager am = (AccessibilityManager) getContext().getSystemService(Context.ACCESSIBILITY_SERVICE);
-            if (am != null) {
-                java.lang.reflect.Method method = am.getClass().getMethod("isHighTextContrastEnabled");
-                Object result = method.invoke(am);
-                if (Boolean.TRUE.equals(result)) {
-                    return true;
-                }
-            }
-        } catch (Throwable ignored) {
-        }
-        try {
-            if (Settings.Secure.getInt(getContext().getContentResolver(), "high_text_contrast_enabled", 0) == 1) {
-                return true;
-            }
-        } catch (Throwable ignored) {
-        }
-        try {
-            if (Settings.Secure.getInt(getContext().getContentResolver(), "accessibility_high_text_contrast_enabled", 0) == 1) {
-                return true;
-            }
-        } catch (Throwable ignored) {
-        }
-        return false;
+    private void init() {
+        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
     }
 
-    private boolean isHighContrastThemeActive() {
-        try {
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
-            String theme = prefs.getString("theme", "");
-            return CommonActivity.THEME_YELLOWBLACK.equals(theme) || "yellowblack".equalsIgnoreCase(theme);
-        } catch (Exception ignored) {
-            return false;
-        }
-    }
-
-    private boolean shouldBypass() {
-        return isHighTextContrastActive() || isHighContrastThemeActive();
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        if (!shouldBypass() || !canvas.isHardwareAccelerated() || getWidth() <= 0 || getHeight() <= 0) {
+        // If rendered via software layer (the default due to setLayerType),
+        // canvas.isHardwareAccelerated() is false and Skia CPU preserves pure colors.
+        if (!canvas.isHardwareAccelerated() || getWidth() <= 0 || getHeight() <= 0) {
             super.onDraw(canvas);
             return;
         }
 
+        // If hardware acceleration is forced by parent/OEM, draw via offscreen software bitmap
+        // because HWUI never alters bitmap pixels with high contrast text overrides.
         try {
             int width = getWidth();
             int height = getHeight();
