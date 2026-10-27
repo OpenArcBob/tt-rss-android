@@ -63,7 +63,7 @@
         <item name="android:textColorPrimary">@color/yb_theme_onSurface</item>
         <item name="android:textColorSecondary">@color/yb_theme_onSurfaceVariant</item>
         <item name="android:textColorTertiary">@color/yb_theme_tertiary</item>
-        <item name="android:textColorHighlight">#66FFE500</item>
+        <item name="android:textColorHighlight">#66E9E06B</item>
         <item name="android:textColorLink">@color/yb_theme_primary</item>
 
         <item name="colorPrimary">@color/yb_theme_primary</item>

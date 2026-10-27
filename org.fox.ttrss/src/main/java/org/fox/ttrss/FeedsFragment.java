@@ -392,14 +392,14 @@ public class FeedsFragment extends Fragment implements OnSharedPreferenceChangeL
                     holder.title.setTypeface(null, Typeface.NORMAL);
                 }
 
-                holder.title.setTextColor(ColorStateList.valueOf(0xFFFFFF00));
+                holder.title.setTextColor(ColorStateList.valueOf(0xFFE9E06B));
 
                 holder.title.setAlpha(feed.update_interval == -1 ? 0.5f : 1f);
             }
 
             if (holder.unreadCounter != null) {
                 holder.unreadCounter.setText(String.valueOf(feed.unread));
-                holder.unreadCounter.setTextColor(ColorStateList.valueOf(0xFFFFFF00));
+                holder.unreadCounter.setTextColor(ColorStateList.valueOf(0xFFE9E06B));
                 holder.unreadCounter.setVisibility((feed.unread > 0) ? View.VISIBLE : View.INVISIBLE);
             }
 

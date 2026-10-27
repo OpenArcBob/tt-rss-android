@@ -17,14 +17,14 @@ import androidx.annotation.Nullable;
 import com.google.android.material.textview.MaterialTextView;
 
 /**
- * A TextView that unconditionally forces Samsung High Contrast Yellow (#FFFF00)
+ * A TextView that unconditionally forces Samsung High Contrast Yellow (#E9E06B)
  * and bypasses system/OEM high-contrast font hooks (which forcefully override text
  * to white with black outline in hardware-accelerated HWUI rendering) by rendering
  * glyph geometry directly as vector Paths or via an offscreen software bitmap.
  */
 public class HighContrastTextView extends MaterialTextView {
 
-    public static final int HIGH_CONTRAST_YELLOW = 0xFFFFFF00;
+    public static final int HIGH_CONTRAST_YELLOW = 0xFFE9E06B;
 
     private final Path mTextPath = new Path();
     private Bitmap mBitmap;

@@ -5,7 +5,7 @@
 
     <include layout="@layout/toolbar" android:id="@+id/toolbar" />
 
-    <TextView
+    <org.fox.ttrss.HighContrastTextView
 
             android:id="@+id/loading_message"
             android:layout_width="match_parent"

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Samsung High Contrast Yellows -->
-    <color name="yb_theme_primary">#FFFF00</color>
+    <!-- Samsung High Contrast Yellows (#E9E06B) -->
+    <color name="yb_theme_primary">#E9E06B</color>
     <color name="yb_theme_onPrimary">#000000</color>
     <color name="yb_theme_primaryContainer">#332E00</color>
-    <color name="yb_theme_onPrimaryContainer">#FFFF00</color>
+    <color name="yb_theme_onPrimaryContainer">#E9E06B</color>
 
-    <color name="yb_theme_secondary">#FFFF00</color>
+    <color name="yb_theme_secondary">#E9E06B</color>
     <color name="yb_theme_onSecondary">#000000</color>
     <color name="yb_theme_secondaryContainer">#292400</color>
-    <color name="yb_theme_onSecondaryContainer">#FFFF00</color>
+    <color name="yb_theme_onSecondaryContainer">#E9E06B</color>
 
-    <color name="yb_theme_tertiary">#FFFF00</color>
+    <color name="yb_theme_tertiary">#E9E06B</color>
     <color name="yb_theme_onTertiary">#000000</color>
     <color name="yb_theme_tertiaryContainer">#2A2400</color>
-    <color name="yb_theme_onTertiaryContainer">#FFFF00</color>
+    <color name="yb_theme_onTertiaryContainer">#E9E06B</color>
 
     <!-- Error states -->
     <color name="yb_theme_error">#FF5252</color>
@@ -24,33 +24,33 @@
 
     <!-- OLED Pitch Black Background & Surfaces -->
     <color name="yb_theme_background">#000000</color>
-    <color name="yb_theme_onBackground">#FFFF00</color>
+    <color name="yb_theme_onBackground">#E9E06B</color>
     <color name="yb_theme_surface">#000000</color>
-    <color name="yb_theme_onSurface">#FFFF00</color>
+    <color name="yb_theme_onSurface">#E9E06B</color>
     <color name="yb_theme_surfaceVariant">#121212</color>
-    <color name="yb_theme_onSurfaceVariant">#FFFF00</color>
+    <color name="yb_theme_onSurfaceVariant">#E9E06B</color>
 
     <!-- Outlines & Borders -->
-    <color name="yb_theme_outline">#FFFF00</color>
+    <color name="yb_theme_outline">#E9E06B</color>
     <color name="yb_theme_outlineVariant">#4D4400</color>
 
     <!-- Inverses -->
-    <color name="yb_theme_inverseSurface">#FFFF00</color>
+    <color name="yb_theme_inverseSurface">#E9E06B</color>
     <color name="yb_theme_inverseOnSurface">#000000</color>
     <color name="yb_theme_inversePrimary">#665C00</color>
 
     <!-- Fixed variants -->
-    <color name="yb_theme_primaryFixed">#FFFF00</color>
+    <color name="yb_theme_primaryFixed">#E9E06B</color>
     <color name="yb_theme_onPrimaryFixed">#000000</color>
-    <color name="yb_theme_primaryFixedDim">#FFD54F</color>
+    <color name="yb_theme_primaryFixedDim">#E9E06B</color>
     <color name="yb_theme_onPrimaryFixedVariant">#332E00</color>
-    <color name="yb_theme_secondaryFixed">#FFD54F</color>
+    <color name="yb_theme_secondaryFixed">#E9E06B</color>
     <color name="yb_theme_onSecondaryFixed">#000000</color>
-    <color name="yb_theme_secondaryFixedDim">#FFE082</color>
+    <color name="yb_theme_secondaryFixedDim">#E9E06B</color>
     <color name="yb_theme_onSecondaryFixedVariant">#292400</color>
-    <color name="yb_theme_tertiaryFixed">#FFEA00</color>
+    <color name="yb_theme_tertiaryFixed">#E9E06B</color>
     <color name="yb_theme_onTertiaryFixed">#000000</color>
-    <color name="yb_theme_tertiaryFixedDim">#FFE082</color>
+    <color name="yb_theme_tertiaryFixedDim">#E9E06B</color>
     <color name="yb_theme_onTertiaryFixedVariant">#2A2400</color>
 
     <!-- Surface Containers (OLED true black base) -->
