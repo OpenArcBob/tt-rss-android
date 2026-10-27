@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
+                <org.fox.ttrss.HighContrastTextView
                     android:id="@+id/title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
 
             </LinearLayout>
 
-            <TextView
+            <org.fox.ttrss.HighContrastTextView
                 android:id="@+id/comments"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
@@ -57,7 +57,7 @@
                 android:textColor="?colorPrimary"
                 android:textSize="12sp" />
 
-            <TextView
+            <org.fox.ttrss.HighContrastTextView
                 android:id="@+id/link_host"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
@@ -79,7 +79,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp">
 
-                <TextView
+                <org.fox.ttrss.HighContrastTextView
                     android:id="@+id/tags"
                     tools:text="alpha, beta, gamma"
                     android:layout_width="0dp"
@@ -92,7 +92,7 @@
                     android:textColor="?colorSecondary"
                     android:textSize="12sp" />
 
-                <TextView
+                <org.fox.ttrss.HighContrastTextView
                     android:id="@+id/date"
                     tools:text="Jan 01, 1970"
                     android:layout_width="0dp"
@@ -123,7 +123,7 @@
                         android:layout_margin="8dp"
                         android:layout_height="wrap_content">
 
-                        <TextView
+                        <org.fox.ttrss.HighContrastTextView
                             android:id="@+id/note"
                             tools:text="Article note (if any...)"
                             android:layout_gravity="center_vertical"

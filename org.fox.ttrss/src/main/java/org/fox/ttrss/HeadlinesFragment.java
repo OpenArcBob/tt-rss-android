@@ -759,7 +759,7 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
         private int colorFromAttr(int attr) {
             TypedValue tv = new TypedValue();
             m_activity.getTheme().resolveAttribute(attr, tv, true);
-            return ContextCompat.getColor(m_activity, tv.resourceId);
+            return tv.resourceId != 0 ? ContextCompat.getColor(m_activity, tv.resourceId) : tv.data;
         }
 
         public ArticleListAdapter() {

@@ -22,7 +22,7 @@
         android:paddingStart="8dp"
         android:paddingEnd="8dp">
 
-        <TextView
+        <org.fox.ttrss.HighContrastTextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
             android:textStyle="normal"
             tools:text="Sample entry title which is overwhelmingly long blah blah blah" />
 
-        <TextView
+        <org.fox.ttrss.HighContrastTextView
             android:id="@+id/excerpt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

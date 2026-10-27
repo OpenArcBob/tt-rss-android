@@ -22,7 +22,7 @@
         app:tint="?colorOnPrimaryContainer"
         android:src="@drawable/rss_box" />
 
-    <TextView
+    <org.fox.ttrss.HighContrastTextView
         android:id="@+id/title"
         android:fontFamily="sans-serif-medium"
         android:layout_width="wrap_content"

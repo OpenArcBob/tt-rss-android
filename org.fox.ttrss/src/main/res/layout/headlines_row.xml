@@ -28,7 +28,7 @@
                 android:layout_span="2"
                 android:padding="16dp">
 
-                <TextView
+                <org.fox.ttrss.HighContrastTextView
                     android:id="@+id/title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
                     android:layout_below="@+id/title"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <org.fox.ttrss.HighContrastTextView
                         android:id="@+id/feed_title"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
                         android:textSize="12sp"
                         tools:text="Example Feed AAA AAA AAAAAA AAAA AAAAA AA A A AA AA" />
 
-                    <TextView
+                    <org.fox.ttrss.HighContrastTextView
                         android:id="@+id/date"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
 
                 </LinearLayout>
 
-                <TextView
+                <org.fox.ttrss.HighContrastTextView
                     android:id="@+id/link_host"
                     android:layout_width="match_parent"
                     android:layout_marginTop="8dp"
@@ -171,7 +171,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <org.fox.ttrss.HighContrastTextView
                 android:id="@+id/excerpt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -205,7 +205,7 @@
                     android:layout_weight="0"
                     android:focusable="false" />
 
-                <TextView
+                <org.fox.ttrss.HighContrastTextView
                     android:id="@+id/author"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"

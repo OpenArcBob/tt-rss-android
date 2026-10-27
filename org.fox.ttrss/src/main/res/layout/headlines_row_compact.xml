@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
+        <org.fox.ttrss.HighContrastTextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
             android:textColor="?colorOnSurface"
             android:textSize="18sp" />
 
-        <TextView
+        <org.fox.ttrss.HighContrastTextView
             android:id="@+id/feed_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
             android:textSize="12sp"
             android:layout_marginTop="4dp" />
 
-        <TextView
+        <org.fox.ttrss.HighContrastTextView
             android:id="@+id/excerpt"
             android:maxLines="2"
             android:ellipsize="end"
@@ -82,7 +82,7 @@
         android:layout_width="48dp"
         android:layout_height="match_parent">
 
-        <TextView
+        <org.fox.ttrss.HighContrastTextView
             android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

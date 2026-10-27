@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Samsung High Contrast Yellows -->
-    <color name="yb_theme_primary">#FFE500</color>
+    <color name="yb_theme_primary">#FFFF00</color>
     <color name="yb_theme_onPrimary">#000000</color>
     <color name="yb_theme_primaryContainer">#332E00</color>
     <color name="yb_theme_onPrimaryContainer">#FFFF00</color>
 
-    <color name="yb_theme_secondary">#FFD54F</color>
+    <color name="yb_theme_secondary">#FFFF00</color>
     <color name="yb_theme_onSecondary">#000000</color>
     <color name="yb_theme_secondaryContainer">#292400</color>
-    <color name="yb_theme_onSecondaryContainer">#FFE082</color>
+    <color name="yb_theme_onSecondaryContainer">#FFFF00</color>
 
-    <color name="yb_theme_tertiary">#FFEA00</color>
+    <color name="yb_theme_tertiary">#FFFF00</color>
     <color name="yb_theme_onTertiary">#000000</color>
     <color name="yb_theme_tertiaryContainer">#2A2400</color>
     <color name="yb_theme_onTertiaryContainer">#FFFF00</color>
@@ -28,10 +28,10 @@
     <color name="yb_theme_surface">#000000</color>
     <color name="yb_theme_onSurface">#FFFF00</color>
     <color name="yb_theme_surfaceVariant">#121212</color>
-    <color name="yb_theme_onSurfaceVariant">#FFD54F</color>
+    <color name="yb_theme_onSurfaceVariant">#FFFF00</color>
 
     <!-- Outlines & Borders -->
-    <color name="yb_theme_outline">#FFE500</color>
+    <color name="yb_theme_outline">#FFFF00</color>
     <color name="yb_theme_outlineVariant">#4D4400</color>
 
     <!-- Inverses -->
@@ -40,7 +40,7 @@
     <color name="yb_theme_inversePrimary">#665C00</color>
 
     <!-- Fixed variants -->
-    <color name="yb_theme_primaryFixed">#FFE500</color>
+    <color name="yb_theme_primaryFixed">#FFFF00</color>
     <color name="yb_theme_onPrimaryFixed">#000000</color>
     <color name="yb_theme_primaryFixedDim">#FFD54F</color>
     <color name="yb_theme_onPrimaryFixedVariant">#332E00</color>
