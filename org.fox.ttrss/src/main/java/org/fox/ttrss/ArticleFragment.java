@@ -286,15 +286,16 @@ public class ArticleFragment extends androidx.fragment.app.Fragment {
 
         String textColor = "#FFEB3B";
         String linkHexColor = "#FFEB3B";
-        String cssOverride = "body { color : " + textColor + "; font-family: sans-serif; }";
-        cssOverride += " * { font-family: sans-serif !important; }";
-        cssOverride += " a:link {color: " + linkHexColor + ";} a:visited { color: " + linkHexColor + ";}";
+        String bgColor = "#0D0D0D";
+        String cssOverride = "html, body { color : " + textColor + " !important; background-color: " + bgColor + " !important; font-family: sans-serif !important; }";
+        cssOverride += " * { font-family: sans-serif !important; background-color: " + bgColor + " !important; color: " + textColor + " !important; }";
+        cssOverride += " a:link, a:visited, a:hover, a:active { color: " + linkHexColor + " !important; background-color: " + bgColor + " !important; }";
 
         String articleContent = m_article.content;
 
         ws.setJavaScriptEnabled(m_prefs.getBoolean("article_javascript_enabled", false));
 
-        m_web.setBackgroundColor(Color.TRANSPARENT);
+        m_web.setBackgroundColor(0xFF0D0D0D);
 
         ws.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         ws.setMediaPlaybackRequiresUserGesture(true);
@@ -314,7 +315,7 @@ public class ArticleFragment extends androidx.fragment.app.Fragment {
                 "<meta content=\"text/html; charset=utf-8\" http-equiv=\"content-type\">" +
                 "<meta name=\"viewport\" content=\"width=device-width\" />" +
                 "<style type=\"text/css\">" +
-                "body { padding : 0px; margin : " + margin8dp + "px; line-height : 1.3; word-wrap: break-word; }" +
+                "body { padding : 0px; margin : " + margin8dp + "px; line-height : 1.3; word-wrap: break-word; background-color: " + bgColor + "; }" +
                 "h1, h2, h3, h4, h5, h6 { line-height: 1; text-align: initial; }" +
                 "img, video, iframe { max-width : 100%; width : auto; height : auto; }" +
                 "img, video { object-fit : contain }" +

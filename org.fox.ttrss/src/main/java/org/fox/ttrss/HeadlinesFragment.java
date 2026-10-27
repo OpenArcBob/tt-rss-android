@@ -1089,7 +1089,7 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
 
         private void updateUnreadView(final Article article, final ArticleViewHolder holder) {
             if (m_compactLayoutMode) {
-                holder.view.setBackgroundColor(article.unread ? m_colorSurfaceContainerLowest : 0);
+                holder.view.setBackgroundColor(article.unread ? m_colorSurfaceContainerLowest : m_colorSurface);
             } else {
                 MaterialCardView card = (MaterialCardView) holder.view;
 

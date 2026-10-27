@@ -2,32 +2,32 @@
 <resources>
     <!-- Samsung High Contrast Yellows (#FFEB3B) -->
     <color name="yb_theme_primary">#FFEB3B</color>
-    <color name="yb_theme_onPrimary">#000000</color>
-    <color name="yb_theme_primaryContainer">#332E00</color>
+    <color name="yb_theme_onPrimary">#0D0D0D</color>
+    <color name="yb_theme_primaryContainer">#0D0D0D</color>
     <color name="yb_theme_onPrimaryContainer">#FFEB3B</color>
 
     <color name="yb_theme_secondary">#FFEB3B</color>
-    <color name="yb_theme_onSecondary">#000000</color>
-    <color name="yb_theme_secondaryContainer">#292400</color>
+    <color name="yb_theme_onSecondary">#0D0D0D</color>
+    <color name="yb_theme_secondaryContainer">#0D0D0D</color>
     <color name="yb_theme_onSecondaryContainer">#FFEB3B</color>
 
     <color name="yb_theme_tertiary">#FFEB3B</color>
-    <color name="yb_theme_onTertiary">#000000</color>
-    <color name="yb_theme_tertiaryContainer">#2A2400</color>
+    <color name="yb_theme_onTertiary">#0D0D0D</color>
+    <color name="yb_theme_tertiaryContainer">#0D0D0D</color>
     <color name="yb_theme_onTertiaryContainer">#FFEB3B</color>
 
     <!-- Error states -->
     <color name="yb_theme_error">#FF5252</color>
-    <color name="yb_theme_onError">#000000</color>
+    <color name="yb_theme_onError">#0D0D0D</color>
     <color name="yb_theme_errorContainer">#5C0000</color>
     <color name="yb_theme_onErrorContainer">#FFCDD2</color>
 
-    <!-- OLED Pitch Black Background & Surfaces -->
-    <color name="yb_theme_background">#000000</color>
+    <!-- Background & Surfaces (#0D0D0D) -->
+    <color name="yb_theme_background">#0D0D0D</color>
     <color name="yb_theme_onBackground">#FFEB3B</color>
-    <color name="yb_theme_surface">#000000</color>
+    <color name="yb_theme_surface">#0D0D0D</color>
     <color name="yb_theme_onSurface">#FFEB3B</color>
-    <color name="yb_theme_surfaceVariant">#121212</color>
+    <color name="yb_theme_surfaceVariant">#0D0D0D</color>
     <color name="yb_theme_onSurfaceVariant">#FFEB3B</color>
 
     <!-- Outlines & Borders -->
@@ -36,29 +36,29 @@
 
     <!-- Inverses -->
     <color name="yb_theme_inverseSurface">#FFEB3B</color>
-    <color name="yb_theme_inverseOnSurface">#000000</color>
+    <color name="yb_theme_inverseOnSurface">#0D0D0D</color>
     <color name="yb_theme_inversePrimary">#665C00</color>
 
     <!-- Fixed variants -->
     <color name="yb_theme_primaryFixed">#FFEB3B</color>
-    <color name="yb_theme_onPrimaryFixed">#000000</color>
+    <color name="yb_theme_onPrimaryFixed">#0D0D0D</color>
     <color name="yb_theme_primaryFixedDim">#FFEB3B</color>
-    <color name="yb_theme_onPrimaryFixedVariant">#332E00</color>
+    <color name="yb_theme_onPrimaryFixedVariant">#0D0D0D</color>
     <color name="yb_theme_secondaryFixed">#FFEB3B</color>
-    <color name="yb_theme_onSecondaryFixed">#000000</color>
+    <color name="yb_theme_onSecondaryFixed">#0D0D0D</color>
     <color name="yb_theme_secondaryFixedDim">#FFEB3B</color>
-    <color name="yb_theme_onSecondaryFixedVariant">#292400</color>
+    <color name="yb_theme_onSecondaryFixedVariant">#0D0D0D</color>
     <color name="yb_theme_tertiaryFixed">#FFEB3B</color>
-    <color name="yb_theme_onTertiaryFixed">#000000</color>
+    <color name="yb_theme_onTertiaryFixed">#0D0D0D</color>
     <color name="yb_theme_tertiaryFixedDim">#FFEB3B</color>
-    <color name="yb_theme_onTertiaryFixedVariant">#2A2400</color>
+    <color name="yb_theme_onTertiaryFixedVariant">#0D0D0D</color>
 
-    <!-- Surface Containers (OLED true black base) -->
-    <color name="yb_theme_surfaceDim">#000000</color>
-    <color name="yb_theme_surfaceBright">#222222</color>
-    <color name="yb_theme_surfaceContainerLowest">#000000</color>
-    <color name="yb_theme_surfaceContainerLow">#0A0A0A</color>
-    <color name="yb_theme_surfaceContainer">#000000</color>
-    <color name="yb_theme_surfaceContainerHigh">#141414</color>
-    <color name="yb_theme_surfaceContainerHighest">#1F1F1F</color>
+    <!-- Surface Containers (#0D0D0D) -->
+    <color name="yb_theme_surfaceDim">#0D0D0D</color>
+    <color name="yb_theme_surfaceBright">#0D0D0D</color>
+    <color name="yb_theme_surfaceContainerLowest">#0D0D0D</color>
+    <color name="yb_theme_surfaceContainerLow">#0D0D0D</color>
+    <color name="yb_theme_surfaceContainer">#0D0D0D</color>
+    <color name="yb_theme_surfaceContainerHigh">#0D0D0D</color>
+    <color name="yb_theme_surfaceContainerHighest">#0D0D0D</color>
 </resources>

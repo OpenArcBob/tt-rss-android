@@ -8,6 +8,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.text.Layout;
 import android.text.TextPaint;
 import android.util.AttributeSet;
@@ -26,6 +28,7 @@ import com.google.android.material.textview.MaterialTextView;
 public class HighContrastTextView extends MaterialTextView {
 
     public static final int HIGH_CONTRAST_YELLOW = 0xFFFFEB3B;
+    public static final int HIGH_CONTRAST_BG = 0xFF0D0D0D;
 
     private final Path mTextPath = new Path();
     private Bitmap mBitmap;
@@ -49,6 +52,32 @@ public class HighContrastTextView extends MaterialTextView {
     private void init() {
         super.setTextColor(ColorStateList.valueOf(HIGH_CONTRAST_YELLOW));
         super.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.NORMAL));
+        super.setBackgroundColor(HIGH_CONTRAST_BG);
+    }
+
+    @Override
+    public void setBackgroundColor(int color) {
+        super.setBackgroundColor(HIGH_CONTRAST_BG);
+    }
+
+    @Override
+    public void setBackground(Drawable background) {
+        super.setBackground(new ColorDrawable(HIGH_CONTRAST_BG));
+    }
+
+    @Override
+    public void setBackgroundDrawable(Drawable background) {
+        super.setBackgroundDrawable(new ColorDrawable(HIGH_CONTRAST_BG));
+    }
+
+    @Override
+    public void setBackgroundResource(int resid) {
+        super.setBackgroundColor(HIGH_CONTRAST_BG);
+    }
+
+    @Override
+    public void setBackgroundTintList(ColorStateList tint) {
+        super.setBackgroundTintList(ColorStateList.valueOf(HIGH_CONTRAST_BG));
     }
 
     @Override
@@ -74,6 +103,7 @@ public class HighContrastTextView extends MaterialTextView {
 
     @Override
     protected void onDraw(Canvas canvas) {
+        canvas.drawColor(HIGH_CONTRAST_BG);
         super.setTextColor(ColorStateList.valueOf(HIGH_CONTRAST_YELLOW));
 
         if (getWidth() <= 0 || getHeight() <= 0) {
@@ -142,7 +172,7 @@ public class HighContrastTextView extends MaterialTextView {
                 mBitmapCanvas = new Canvas(mBitmap);
             }
 
-            mBitmap.eraseColor(Color.TRANSPARENT);
+            mBitmap.eraseColor(HIGH_CONTRAST_BG);
 
             int scrollX = getScrollX();
             int scrollY = getScrollY();
