@@ -41,22 +41,26 @@ public class HighContrastTextView extends MaterialTextView {
     private boolean isHighTextContrastActive() {
         try {
             AccessibilityManager am = (AccessibilityManager) getContext().getSystemService(Context.ACCESSIBILITY_SERVICE);
-            if (am != null && am.isHighTextContrastEnabled()) {
-                return true;
+            if (am != null) {
+                java.lang.reflect.Method method = am.getClass().getMethod("isHighTextContrastEnabled");
+                Object result = method.invoke(am);
+                if (Boolean.TRUE.equals(result)) {
+                    return true;
+                }
             }
-        } catch (Exception ignored) {
+        } catch (Throwable ignored) {
         }
         try {
             if (Settings.Secure.getInt(getContext().getContentResolver(), "high_text_contrast_enabled", 0) == 1) {
                 return true;
             }
-        } catch (Exception ignored) {
+        } catch (Throwable ignored) {
         }
         try {
             if (Settings.Secure.getInt(getContext().getContentResolver(), "accessibility_high_text_contrast_enabled", 0) == 1) {
                 return true;
             }
-        } catch (Exception ignored) {
+        } catch (Throwable ignored) {
         }
         return false;
     }
