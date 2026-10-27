@@ -57,6 +57,8 @@
     <style name="AppTheme.YellowBlack" parent="Theme.Material3.Dark.NoActionBar">
         <item name="windowActionModeOverlay">true</item>
         <item name="preferenceTheme">@style/AppPreferenceThemeOverlay</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="fontFamily">sans-serif</item>
 
         <item name="android:colorBackground">@color/yb_theme_background</item>
         <item name="android:windowBackground">@color/yb_theme_background</item>

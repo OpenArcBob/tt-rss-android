@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Typeface;
 import android.text.Layout;
 import android.text.TextPaint;
 import android.util.AttributeSet;
@@ -47,6 +48,18 @@ public class HighContrastTextView extends MaterialTextView {
 
     private void init() {
         super.setTextColor(ColorStateList.valueOf(HIGH_CONTRAST_YELLOW));
+        super.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.NORMAL));
+    }
+
+    @Override
+    public void setTypeface(@Nullable Typeface tf, int style) {
+        super.setTypeface(Typeface.create(Typeface.SANS_SERIF, style), style);
+    }
+
+    @Override
+    public void setTypeface(@Nullable Typeface tf) {
+        int style = tf != null ? tf.getStyle() : Typeface.NORMAL;
+        super.setTypeface(Typeface.create(Typeface.SANS_SERIF, style));
     }
 
     @Override
@@ -74,6 +87,7 @@ public class HighContrastTextView extends MaterialTextView {
                 TextPaint paint = getPaint();
                 paint.setColor(HIGH_CONTRAST_YELLOW);
                 paint.setStyle(Paint.Style.FILL);
+                paint.setTypeface(Typeface.create(Typeface.SANS_SERIF, paint.getTypeface() != null ? paint.getTypeface().getStyle() : Typeface.NORMAL));
 
                 int saveCount = canvas.save();
                 canvas.translate(getCompoundPaddingLeft(), getExtendedPaddingTop());

@@ -387,9 +387,9 @@ public class FeedsFragment extends Fragment implements OnSharedPreferenceChangeL
                 holder.title.setText(feed.title);
 
                 if (feed.always_open_headlines || (!feed.is_cat && feed.id == -4)) {
-                    holder.title.setTypeface(null, Typeface.BOLD);
+                    holder.title.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
                 } else {
-                    holder.title.setTypeface(null, Typeface.NORMAL);
+                    holder.title.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
                 }
 
                 holder.title.setTextColor(ColorStateList.valueOf(0xFFFFEB3B));

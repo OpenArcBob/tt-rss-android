@@ -286,7 +286,8 @@ public class ArticleFragment extends androidx.fragment.app.Fragment {
 
         String textColor = "#FFEB3B";
         String linkHexColor = "#FFEB3B";
-        String cssOverride = "body { color : " + textColor + "; }";
+        String cssOverride = "body { color : " + textColor + "; font-family: sans-serif; }";
+        cssOverride += " * { font-family: sans-serif !important; }";
         cssOverride += " a:link {color: " + linkHexColor + ";} a:visited { color: " + linkHexColor + ";}";
 
         String articleContent = m_article.content;

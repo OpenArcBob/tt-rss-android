@@ -1097,7 +1097,7 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
             }
 
             if (holder.titleView != null) {
-                holder.titleView.setTypeface(null, article.unread ? Typeface.BOLD : Typeface.NORMAL);
+                holder.titleView.setTypeface(Typeface.SANS_SERIF, article.unread ? Typeface.BOLD : Typeface.NORMAL);
                 holder.titleView.setTextColor(0xFFFFEB3B);
             }
 

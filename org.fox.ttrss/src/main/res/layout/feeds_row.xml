@@ -27,7 +27,7 @@
 
         <org.fox.ttrss.HighContrastTextView
             android:id="@+id/title"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="sans-serif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -41,7 +41,7 @@
 
         <org.fox.ttrss.HighContrastTextView
             android:id="@+id/unread_counter"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="sans-serif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
