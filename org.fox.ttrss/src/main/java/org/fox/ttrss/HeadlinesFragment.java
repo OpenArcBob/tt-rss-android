@@ -117,6 +117,7 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
     private SwipeRefreshLayout m_swipeLayout;
     private boolean m_compactLayoutMode = false;
     private boolean m_splitLayoutMode = false;
+    private boolean m_maxTextLayoutMode = false;
     private RecyclerView m_list;
     private LinearLayoutManager m_layoutManager;
     private HeadlinesFragmentModel m_headlinesFragmentModel;
@@ -232,6 +233,7 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
             m_searchQuery = savedInstanceState.getString("m_searchQuery");
             m_compactLayoutMode = savedInstanceState.getBoolean("m_compactLayoutMode");
             m_splitLayoutMode = savedInstanceState.getBoolean("m_splitLayoutMode");
+            m_maxTextLayoutMode = savedInstanceState.getBoolean("m_maxTextLayoutMode");
         }
 
         Glide.get(getContext()).clearMemory();
@@ -245,6 +247,7 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
         out.putString("m_searchQuery", m_searchQuery);
         out.putBoolean("m_compactLayoutMode", m_compactLayoutMode);
         out.putBoolean("m_splitLayoutMode", m_splitLayoutMode);
+        out.putBoolean("m_maxTextLayoutMode", m_maxTextLayoutMode);
     }
 
     @Override
@@ -260,6 +263,9 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
 
         if ("HL_SPLIT".equals(headlineMode))
             m_splitLayoutMode = true;
+
+        if ("HL_MAX_TEXT".equals(headlineMode))
+            m_maxTextLayoutMode = true;
 
         View view = inflater.inflate(R.layout.fragment_headlines, container, false);
 
@@ -797,6 +803,8 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
                 layoutId = R.layout.headlines_row_compact;
             } else if (m_splitLayoutMode) {
                 layoutId = R.layout.headlines_row_split;
+            } else if (m_maxTextLayoutMode) {
+                layoutId = R.layout.headlines_row_maxtext;
             }
 
             if (viewType == VIEW_AMR_FOOTER) {

@@ -14,6 +14,7 @@
     <string-array name="headline_mode_names">
         <item>@string/headline_display_mode_default</item>
         <item>@string/headline_display_mode_no_images</item>
+        <item>@string/headline_display_mode_max_text</item>
         <item>@string/headline_display_mode_compact</item>
         <item>@string/headline_display_mode_compact_noimages</item>
         <item>@string/headline_display_mode_compact_feed_images</item>
@@ -22,6 +23,7 @@
     <string-array name="headline_mode_values" translatable="false">
         <item>HL_DEFAULT</item>
         <item>HL_NOIMAGES</item>
+        <item>HL_MAX_TEXT</item>
         <item>HL_COMPACT</item>
         <item>HL_COMPACT_NOIMAGES</item>
         <item>HL_COMPACT_FEED_IMAGES</item>
