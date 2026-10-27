@@ -30,7 +30,7 @@
             android:maxLines="3"
             android:paddingBottom="2dp"
             android:singleLine="false"
-            android:textColor="?colorPrimary"
+            android:textColor="?colorOnSurface"
             android:textSize="18sp"
             android:textStyle="normal"
             tools:text="Sample entry title which is overwhelmingly long blah blah blah" />
