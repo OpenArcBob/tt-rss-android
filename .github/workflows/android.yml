@@ -22,14 +22,44 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+      
     - name: Build Debug APK
       run: ./gradlew assembleDebug
-    - name: Prepare APK with Timestamp
+      
+    - name: Prepare and Sign APK
+      env:
+        DEBUG_KEYSTORE_BASE64: ${{ secrets.DEBUG_KEYSTORE_BASE64 }}
+        DEBUG_KEYSTORE_PASSWORD: ${{ secrets.DEBUG_KEYSTORE_PASSWORD }}
+        DEBUG_KEY_ALIAS: ${{ secrets.DEBUG_KEY_ALIAS }}
+        DEBUG_KEY_PASSWORD: ${{ secrets.DEBUG_KEY_PASSWORD }}
       run: |
         TIMESTAMP=$(date +'%Y%m%d-%H%M')
         mkdir -p build/apk-release
-        find . -name "*-debug.apk" -exec cp {} build/apk-release/tt-rss-android-$TIMESTAMP-${{ github.sha }}.apk \;
+        OUTPUT_APK="build/apk-release/tt-rss-android-$TIMESTAMP-${{ github.sha }}.apk"
 
+        # Copy built debug APK to target path
+        find . -name "*-debug.apk" -exec cp {} "$OUTPUT_APK" \;
+
+        # If running in a context where secrets exist (push to master), sign outside Gradle
+        if [ -n "$DEBUG_KEYSTORE_BASE64" ]; then
+          KEYSTORE_PATH="/tmp/debug.keystore"
+          trap 'rm -f "$KEYSTORE_PATH"' EXIT
+
+          echo "$DEBUG_KEYSTORE_BASE64" | base64 -d > "$KEYSTORE_PATH"
+
+          BUILD_TOOLS_DIR=$(ls -d "$ANDROID_HOME/build-tools"/* | sort -V | tail -n 1)
+          APKSIGNER="$BUILD_TOOLS_DIR/apksigner"
+
+          "$APKSIGNER" sign \
+            --ks "$KEYSTORE_PATH" \
+            --ks-key-alias "${DEBUG_KEY_ALIAS:-androiddebugkey}" \
+            --ks-pass env:DEBUG_KEYSTORE_PASSWORD \
+            --key-pass env:DEBUG_KEY_PASSWORD \
+            "$OUTPUT_APK"
+
+          "$APKSIGNER" verify "$OUTPUT_APK"
+        fi
+        
     - name: Upload Debug APK
       uses: actions/upload-artifact@v5
       with:
