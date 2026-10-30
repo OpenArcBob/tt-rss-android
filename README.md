@@ -1,4 +1,4 @@
-Tiny Tiny RSS client for Android
+ttrssa client for Android
 ================================
 
 ## Some notes about this project

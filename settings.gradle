@@ -1,2 +1,2 @@
 include ':org.fox.ttrss'
-rootProject.name='Tiny Tiny RSS for Android'
+rootProject.name='ttrssa for Android'

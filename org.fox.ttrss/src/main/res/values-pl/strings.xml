@@ -2,8 +2,8 @@
 <resources>
     <!-- ########################################################################## -->
    <!-- #                                                                        # -->
-   <!-- #    Polish translation for Tiny Tiny RSS android client                 # -->
-   <!-- #    Polskie tłumaczenie dla androidowego klienta Tiny Tiny RSS          # -->
+   <!-- #    Polish translation for ttrssa android client                 # -->
+   <!-- #    Polskie tłumaczenie dla androidowego klienta ttrssa          # -->
    <!-- #                                                                        # -->
    <!-- #                                                                        # -->
    <!-- #    Please see entries marked with FIXME comments, maybe you'll have    # -->
@@ -18,7 +18,7 @@
    <!-- ########################################################################## -->
 
     <string name="login_in_progress">Logowanie…</string>
-    <string name="app_name">Tiny Tiny RSS</string>
+    <string name="app_name">ttrssa</string>
     <string name="login_need_configure">Najpierw skonfiguruj aplikację.</string>
     <string name="login_ready">Gotowy do zalogowania.</string>
     <string name="login_login">Zaloguj</string>
@@ -29,7 +29,7 @@
     <string name="default_url">http://example.domain/tt-rss/</string>
     <string name="look_and_feel">Wygląd</string>
     <string name="pref_theme">Styl</string>
-    <string name="ttrss_url">Adres Tiny Tiny RSS</string>
+    <string name="ttrss_url">Adres ttrssa</string>
     <string name="theme_dark">Ciemny</string>
     <string name="preferences">Ustawienia</string>
     <string name="theme_light">Jasny</string>
@@ -141,20 +141,20 @@
     <string name="error_ssl_hostname_rejected">Błąd: nazwa serwera nie zweryfikowana z cert. SSL</string>
     <string name="trial_purchase">Odblokuj pełną wersję</string>
     <string name="trial_expired">Wersja testowa wygasła</string>
-    <string name="trial_expired_message">Aby nadal używać Tiny Tiny RSS odblokuj pełną wersję kupując klucz aktywacyjny.</string>
+    <string name="trial_expired_message">Aby nadal używać ttrssa odblokuj pełną wersję kupując klucz aktywacyjny.</string>
     <string name="theme_sepia">Sepia</string>
     <string name="reading">Czytanie</string>
     <string name="offline_articles_to_download">Ilość artykułów do pobrania</string>
     <string name="offline_articles_to_download_long">Ilość artykułów do pobrania dla trybu offline (najnowsze najpierw)</string>
     <string name="pref_headlines_show_content_long">Pokaż podgląd treści artykułu na liście nagłówków</string>
     <string name="pref_headlines_show_content">Podgląd treści artykułu</string>
-    <string name="api_too_low">To działanie wymaga nowszej wersji Tiny Tiny RSS</string>
+    <string name="api_too_low">To działanie wymaga nowszej wersji ttrssa</string>
     <string name="share_url_hint">URL artykułu</string>
     <string name="share_content_hint">Treść artykułu</string>
     <string name="share_title_hint">Tytuł artykułu</string>
     <string name="share_share_button">Udostępnij</string>
     <string name="share_article_posted">Artykuł udostępniony.</string>
-    <string name="subscribe_name">Prenumeruj używając Tiny Tiny RSS</string>
+    <string name="subscribe_name">Prenumeruj używając ttrssa</string>
     <string name="feed_url">URL kanału</string>
     <string name="subscribe_to_feed">Prenumeruj kanał</string>
     <string name="error_while_subscribing">Podczas prenumerowania wystąpił błąd.</string>
@@ -186,7 +186,7 @@
     <string name="prefs_version_title">Wersja</string>
     <string name="prefs_build_timestamp">%1$s</string>
     <string name="prefs_build_timestamp_title">Znacznik czasu kompilacji</string>
-    <string name="crash_dialog_text">Niestety, Tiny Tiny RSS przestał działać. Przesłać raport o awarii do tt-rss.org?</string>
+    <string name="crash_dialog_text">Niestety, ttrssa przestał działać. Przesłać raport o awarii do tt-rss.org?</string>
     <string name="prefs_widget_show_fresh">Pokaż najnowsze artykuły</string>
     <string name="prefs_widget_show_fresh_summary">Zamiast łącznej liczby nieprzeczytanych artykułów wyświetl liczbę najnowszych artykułów</string>
     <string name="prefs_widget">Widżet</string>
@@ -324,7 +324,7 @@
     <string name="catchup_dialog_title_search">Zaznaczyć wyniki wyszukiwania w %1$s jako przeczytane?</string>
     <string name="article_edit_note">Edytuj notatkę</string>
     <string name="headline_display_mode_split">Widok rozdzielony: obraz po lewej, tekst po prawej</string>
-    <string name="crash_dialog_text_email">Niestety Tiny Tiny RSS przestał działać. Wysłać raport błędu przez email?</string>
+    <string name="crash_dialog_text_email">Niestety ttrssa przestał działać. Wysłać raport błędu przez email?</string>
     <string name="confirm_catchup_above_title">Zaznaczyć wszystkie artykuły powyżej \"%1s\" jako przeczytane?</string>
     <string name="error_success">Operacja ukończona pomyślnie</string>
     <string name="error_bad_request">Błąd: 400 niepoprawne zapytanie</string>

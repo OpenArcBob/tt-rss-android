@@ -10,7 +10,7 @@
     <string name="default_url">https://example.domain/tt-rss/</string>
     <string name="look_and_feel">Інтерфейс</string>
     <string name="pref_theme">Тема</string>
-    <string name="ttrss_url">Url сервера Tiny Tiny RSS</string>
+    <string name="ttrss_url">Url сервера ttrssa</string>
     <string name="theme_light">Світла</string>
     <string name="theme_dark">Темна</string>
     <string name="preferences">Налаштування</string>
@@ -120,20 +120,20 @@
     </plurals>
     <string name="trial_purchase">Купити повну версію</string>
     <string name="trial_expired">Пробний режим закінчився</string>
-    <string name="trial_expired_message">Щоб продовжити користуватися Tiny Tiny RSS, придбайте ключ для повної версії.</string>
+    <string name="trial_expired_message">Щоб продовжити користуватися ttrssa, придбайте ключ для повної версії.</string>
     <string name="theme_amber">Янтар</string>
     <string name="reading">Читання</string>
     <string name="offline_articles_to_download">Скільки статей завантажувати</string>
     <string name="offline_articles_to_download_long">Скільки статей завантажувати для автономного режиму (спочатку нові)</string>
     <string name="pref_headlines_show_content_long">Показувати передогляд вмісту в списку заголовків</string>
     <string name="pref_headlines_show_content">Показувати передогляд вмісту</string>
-    <string name="api_too_low">Ця дія вимагає новішої версії сервера Tiny Tiny RSS</string>
+    <string name="api_too_low">Ця дія вимагає новішої версії сервера ttrssa</string>
     <string name="share_url_hint">Посилання на статтю</string>
     <string name="share_content_hint">Вміст статті</string>
     <string name="share_title_hint">Заголовок статті</string>
     <string name="share_share_button">Поширити</string>
     <string name="share_article_posted">Стаття збережена.</string>
-    <string name="subscribe_name">Підписатися з Tiny Tiny RSS</string>
+    <string name="subscribe_name">Підписатися з ttrssa</string>
     <string name="feed_url">Посилання на канал</string>
     <string name="subscribe_to_feed">Підписатися на канал</string>
     <string name="error_while_subscribing">Помилка при підписанні.</string>
@@ -206,7 +206,7 @@
     <string name="prefs_version_title">Версія</string>
     <string name="prefs_build_timestamp">%1$s</string>
     <string name="prefs_build_timestamp_title">Дата збірки</string>
-    <string name="crash_dialog_text">На жаль, Tiny Tiny RSS перестав працювати. Відправити звіт про збій до tt-rss.org\?</string>
+    <string name="crash_dialog_text">На жаль, ttrssa перестав працювати. Відправити звіт про збій до tt-rss.org\?</string>
     <string name="prefs_widget_show_fresh">Показувати Свіжі статті</string>
     <string name="prefs_widget_show_fresh_summary">Показувати кількість Свіжих статей, а не загальну</string>
     <string name="prefs_widget">Віджет</string>

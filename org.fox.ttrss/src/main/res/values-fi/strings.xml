@@ -5,7 +5,7 @@
     <string name="default_url">http://example.domain/tt-rss/</string>
     <string name="look_and_feel">Käyttöliittymä</string>
     <string name="pref_theme">Teema</string>
-    <string name="ttrss_url">Tiny Tiny RSS URL</string>
+    <string name="ttrss_url">ttrssa URL</string>
     <string name="theme_light">Vaalea</string>
     <string name="theme_dark">Tumma</string>
     <string name="preferences">Asetukset</string>
@@ -135,7 +135,7 @@
         <item quantity="one">Kokeilutila, %1$d päivä jäljellä.</item>
         <item quantity="other">Kokeilutila, %1$d päivää jäljellä.</item>
     </plurals>
-    <string name="trial_expired_message">Tiny Tiny RSS:n käytön jatkamiseksi, avaa täysversion lukitus ostamalla avain.</string>
+    <string name="trial_expired_message">ttrssa:n käytön jatkamiseksi, avaa täysversion lukitus ostamalla avain.</string>
     <string name="trial_purchase">Avaa täysversion lukitus</string>
     <plurals name="article_comments">
         <item quantity="one">%1$d kommentti</item>

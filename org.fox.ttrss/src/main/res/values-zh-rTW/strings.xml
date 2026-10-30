@@ -39,7 +39,7 @@
     <string name="headlines">標題</string>
     <string name="cat_labels">標籤</string>
     <string name="img_share_image">分享影像</string>
-    <string name="ttrss_url">Tiny Tiny RSS 網址</string>
+    <string name="ttrss_url">ttrssa 網址</string>
     <string name="headlines_select_dialog">選擇文章</string>
     <string name="attachment_copy">複製 URL</string>
     <string name="dialog_open_preferences">設定</string>
@@ -65,7 +65,7 @@
     <string name="headlines_view_mode">設定檢視模式</string>
     <string name="share_content_hint">文章内容</string>
     <string name="share_url_hint">文章 URL</string>
-    <string name="api_too_low">此動作需要新版 Tiny Tiny RSS</string>
+    <string name="api_too_low">此動作需要新版 ttrssa</string>
     <plurals name="article_comments">
         <item quantity="other">%1$d 回應</item>
     </plurals>
@@ -166,9 +166,9 @@
     <string name="quick_preview">快速預覽</string>
     <string name="prefs_custom_tabs_summary">使用瀏覽器的自訂分頁打開外部連結（更快，如果可用的話則使用）</string>
     <string name="prefs_enable_fab_long">閱讀時顯示浮動動作按鈕</string>
-    <string name="crash_dialog_text">很不幸，Tiny Tiny RSS 已停止運行。您願意提交當機報告到 tt-rss.org 嗎？</string>
+    <string name="crash_dialog_text">很不幸，ttrssa 已停止運行。您願意提交當機報告到 tt-rss.org 嗎？</string>
     <string name="trial_expired">試用已過期</string>
-    <string name="trial_expired_message">請購買並解鎖完整版本以繼續使用 Tiny Tiny RSS 。</string>
+    <string name="trial_expired_message">請購買並解鎖完整版本以繼續使用 ttrssa 。</string>
     <string name="use_volume_keys_long">使用硬體音量按鈕瀏覽文章並捲動標題</string>
     <string name="browse_cats_like_feeds_summary">可使用類別情境選單覆寫此設定</string>
     <string name="reading">閱讀</string>
@@ -193,7 +193,7 @@
     <string name="justify_article_text">左右對齊文章文字</string>
     <string name="error_api_unknown_method">錯誤：不明的 API 方法</string>
     <string name="trial_purchase">解鎖完整版本</string>
-    <string name="subscribe_name">使用 Tiny Tiny RSS 訂閱</string>
+    <string name="subscribe_name">使用 ttrssa 訂閱</string>
     <string name="category_list_updated">已更新類別清單</string>
     <string name="accel_webview_title">加速網頁檢視（3.0+）</string>
     <string name="tasker_save_and_close">儲存並關閉</string>
@@ -273,7 +273,7 @@
     <string name="article_edit_note">編輯註記</string>
     <string name="error_success">操作完成</string>
     <string name="error_bad_request">錯誤：400 錯誤的要求</string>
-    <string name="crash_dialog_text_email">很不幸，Tiny Tiny RSS 已停止運行。您願意透過電子郵件提交當機報告嗎？</string>
+    <string name="crash_dialog_text_email">很不幸，ttrssa 已停止運行。您願意透過電子郵件提交當機報告嗎？</string>
     <string name="headlines_set_display_mode">設定顯示模式</string>
     <string name="enable_dynamic_colors">動態顏色</string>
     <string name="expand_special_cat">展開特殊類別</string>

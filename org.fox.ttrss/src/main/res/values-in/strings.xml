@@ -179,7 +179,7 @@
     <string name="enable_dynamic_colors_summary">Memberi nuansa antarmuka pengguna sesuai dengan pengaturan warna perangkat Anda</string>
     <string name="enable_dynamic_colors">Warna dinamis</string>
     <string name="open_on_startup">Buka saat mulai</string>
-    <string name="ttrss_url">Tiny Tiny RSS URL</string>
+    <string name="ttrss_url">ttrssa URL</string>
     <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="ssl">SSL</string>
     <string name="error_ssl_hostname_rejected">Kesalahan: Nama host SSL tidak terverifikasi</string>
@@ -188,7 +188,7 @@
     </plurals>
     <string name="trial_purchase">Buka versi lengkap</string>
     <string name="trial_expired">Masa percobaan berakhir</string>
-    <string name="trial_expired_message">Untuk terus menggunakan Tiny Tiny RSS, silakan buka versi lengkapnya dengan membeli kunci lisensi.</string>
+    <string name="trial_expired_message">Untuk terus menggunakan ttrssa, silakan buka versi lengkapnya dengan membeli kunci lisensi.</string>
     <string name="theme_amber">Amber</string>
     <string name="reading">Membaca</string>
     <string name="blank">Kosong</string>
@@ -199,13 +199,13 @@
     <string name="offline_articles_to_download_long">Berapa banyak artikel yang akan diunduh untuk mode offline (urutan terbaru dahulu)</string>
     <string name="pref_headlines_show_content_long">Tampilkan pratinjau konten dalam daftar judul</string>
     <string name="pref_headlines_show_content">Tampilkan pratinjau konten</string>
-    <string name="api_too_low">Aksi ini memerlukan versi terbaru dari Tiny Tiny RSS</string>
+    <string name="api_too_low">Aksi ini memerlukan versi terbaru dari ttrssa</string>
     <string name="share_url_hint">URL artikel</string>
     <string name="share_content_hint">Isi Artikel</string>
     <string name="share_title_hint">Judul Artikel</string>
     <string name="share_share_button">Bagikan</string>
     <string name="share_article_posted">Artikel diposting.</string>
-    <string name="subscribe_name">Berlangganan dengan Tiny Tiny RSS</string>
+    <string name="subscribe_name">Berlangganan dengan ttrssa</string>
     <string name="feed_url">URL Umpan</string>
     <string name="subscribe_to_feed">Berlangganan ke feed</string>
     <string name="error_while_subscribing">Kesalahan saat berlangganan.</string>
@@ -275,8 +275,8 @@
     <string name="prefs_version_title">Versi</string>
     <string name="prefs_build_timestamp">%1$s</string>
     <string name="prefs_build_timestamp_title">Sidik waktu pembuatan</string>
-    <string name="crash_dialog_text">Maaf, Tiny Tiny RSS telah berhenti. Kirim laporan kerusakan ke tt-rss.org?</string>
-    <string name="crash_dialog_text_email">Maaf, Tiny Tiny RSS telah berhenti. Kirim laporan kerusakan via email?</string>
+    <string name="crash_dialog_text">Maaf, ttrssa telah berhenti. Kirim laporan kerusakan ke tt-rss.org?</string>
+    <string name="crash_dialog_text_email">Maaf, ttrssa telah berhenti. Kirim laporan kerusakan via email?</string>
     <string name="prefs_widget_show_fresh">Tampilkan artikel segar</string>
     <string name="pref_headline_font_size">Ukuran teks</string>
     <string name="enable_icon_tinting">Aktifkan pewarnaan ikon</string>

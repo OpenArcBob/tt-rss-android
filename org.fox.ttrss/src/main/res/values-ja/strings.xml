@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="login_in_progress">ログイン中…</string>
-    <string name="app_name">Tiny Tiny RSS</string>
+    <string name="app_name">ttrssa</string>
     <string name="login_need_configure">まずはじめにアプリケーションの設定をしてください。</string>
     <string name="login_ready">ログイン準備完了。</string>
     <string name="login_login">ログイン</string>
@@ -12,7 +12,7 @@
     <string name="default_url">http://example.domain/tt-rss/</string>
     <string name="look_and_feel">インタフェース</string>
     <string name="pref_theme">テーマ</string>
-    <string name="ttrss_url">Tiny Tiny RSS URL</string>
+    <string name="ttrss_url">ttrssa URL</string>
     <string name="theme_light">ライト</string>
     <string name="theme_dark">ダーク</string>
     <string name="preferences">設定</string>
@@ -125,7 +125,7 @@
     </plurals>
     <string name="trial_purchase">フルバージョンを購入</string>
     <string name="trial_expired">試用期限終了</string>
-    <string name="trial_expired_message">Tiny Tiny RSSを継続して使用する場合はTiny Tiny RSS Unlockerを購入してください。</string>
+    <string name="trial_expired_message">ttrssaを継続して使用する場合はttrssa Unlockerを購入してください。</string>
     <string name="theme_sepia">セピア</string>
     <string name="theme_amber">アンバー</string>
     <string name="reading">読む</string>
@@ -133,7 +133,7 @@
     <string name="offline_articles_to_download_long">オフラインモードにする際にダウンロードする記事数(新しい記事から)</string>
     <string name="pref_headlines_show_content_long">記事内容をヘッドライン一覧に表示する</string>
     <string name="pref_headlines_show_content">記事内容をプレビュー</string>
-    <string name="api_too_low">この動作には新しいバージョンのTiny Tiny RSSが必要です</string>
+    <string name="api_too_low">この動作には新しいバージョンのttrssaが必要です</string>
     <string name="share_url_hint">記事URL</string>
     <string name="share_content_hint">記事内容</string>
     <string name="share_title_hint">記事タイトル</string>
@@ -209,7 +209,7 @@
     <string name="prefs_version_title">バージョン</string>
     <string name="prefs_build_timestamp">%1$s</string>
     <string name="prefs_build_timestamp_title">ビルドタイムスタンプ</string>
-    <string name="crash_dialog_text">残念ながら、Tiny Tiny RSSが停止しました。クラッシュレポートをtt-rss.orgに送信しますか？</string>
+    <string name="crash_dialog_text">残念ながら、ttrssaが停止しました。クラッシュレポートをtt-rss.orgに送信しますか？</string>
     <string name="prefs_widget_show_fresh">新着記事数を表示</string>
     <string name="prefs_widget_show_fresh_summary">全未読記事数の代わりに新着記事数を表示する</string>
     <string name="prefs_widget">ウィジェット</string>
@@ -289,7 +289,7 @@
     <string name="article_edit_note">注釈を編集</string>
     <string name="error_success">オペレーションは正常に完了しました</string>
     <string name="error_bad_request">エラー: 400 bad request</string>
-    <string name="crash_dialog_text_email">残念ながら、Tiny Tiny RSSは停止しました。電子メールでクラッシュレポートを送信しますか？</string>
+    <string name="crash_dialog_text_email">残念ながら、ttrssaは停止しました。電子メールでクラッシュレポートを送信しますか？</string>
     <string name="enable_icon_tinting_summary">アイコンの色で識別が難しい場合は無効にしてください</string>
     <string name="window_secure_mode_summary">スクリーンショットを無効にし、セキュアでないディスプレイ上のウィンドウの内容を隠す</string>
     <string name="enable_dynamic_colors">ダイナミックカラー</string>

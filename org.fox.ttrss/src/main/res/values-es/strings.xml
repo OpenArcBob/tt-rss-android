@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="login_in_progress">Iniciando sesión…</string>
-    <string name="app_name">Tiny Tiny RSS</string>
+    <string name="app_name">ttrssa</string>
     <string name="login_need_configure">Por favor, configure primero la aplicación.</string>
     <string name="login_ready">Listo para iniciar sesión.</string>
     <string name="login_login">Iniciar sesión</string>
@@ -12,7 +12,7 @@
     <string name="default_url">http://example.domain/tt-rss/</string>
     <string name="look_and_feel">Apariencia</string>
     <string name="pref_theme">Tema</string>
-    <string name="ttrss_url">URL do Tiny Tiny RSS</string>
+    <string name="ttrss_url">URL do ttrssa</string>
     <string name="theme_dark">Oscuro</string>
     <string name="preferences">Preferencias</string>
     <string name="theme_light">Claro</string>
@@ -126,20 +126,20 @@
     </plurals>
     <string name="trial_purchase">Desbloquear versión completa</string>
     <string name="trial_expired">Período de prueba expirado</string>
-    <string name="trial_expired_message">Para continuar usando Tiny Tiny RSS, por favor desbloquee la versión completa adquiriendo una clave.</string>
+    <string name="trial_expired_message">Para continuar usando ttrssa, por favor desbloquee la versión completa adquiriendo una clave.</string>
     <string name="theme_sepia">Sepia</string>
     <string name="reading">Leyendo</string>
     <string name="offline_articles_to_download">Número de artículos a descargar</string>
     <string name="offline_articles_to_download_long">Cuántos artículos descargar para el modo sin conexión (los más nuevos primero)</string>
     <string name="pref_headlines_show_content_long">Previsualizar texto de los artículos en la lista de titulares</string>
     <string name="pref_headlines_show_content">Previsualización de artículos</string>
-    <string name="api_too_low">Esta acción requiere una versión más reciente de Tiny Tiny RSS</string>
+    <string name="api_too_low">Esta acción requiere una versión más reciente de ttrssa</string>
     <string name="share_url_hint">URL del artículo</string>
     <string name="share_content_hint">Contenido del artículo</string>
     <string name="share_title_hint">Título del artículo</string>
     <string name="share_share_button">Compartir</string>
     <string name="share_article_posted">Artículo compartido.</string>
-    <string name="subscribe_name">Suscribirse con Tiny Tiny RSS</string>
+    <string name="subscribe_name">Suscribirse con ttrssa</string>
     <string name="feed_url">URL de la fuente</string>
     <string name="subscribe_to_feed">Suscribirse a fuente</string>
     <string name="error_while_subscribing">Error al suscribirse.</string>
@@ -214,7 +214,7 @@
     <string name="headline_display_mode_compact">Compacto</string>
     <string name="prefs_version">%1$s (%2$d)</string>
     <string name="prefs_build_timestamp_title">Fecha de compilación</string>
-    <string name="crash_dialog_text">Lamentablemente, Tiny Tiny RSS se ha detenido. ¿Enviar informe de fallo a tt-rss.org?</string>
+    <string name="crash_dialog_text">Lamentablemente, ttrssa se ha detenido. ¿Enviar informe de fallo a tt-rss.org?</string>
     <string name="prefs_widget_show_fresh">Mostrar artículos nuevos</string>
     <string name="prefs_widget_show_fresh_summary">Mostrar el número de artículos nuevos en lugar del número total de no leídos</string>
     <string name="prefs_widget">Widget</string>

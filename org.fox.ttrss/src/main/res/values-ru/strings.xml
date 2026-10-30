@@ -9,7 +9,7 @@
     <string name="default_url">http://example.domain/tt-rss/</string>
     <string name="look_and_feel">Интерфейс</string>
     <string name="pref_theme">Тема</string>
-    <string name="ttrss_url">URL сервера Tiny Tiny RSS</string>
+    <string name="ttrss_url">URL сервера ttrssa</string>
     <string name="theme_light">Светлая</string>
     <string name="theme_dark">Темная</string>
     <string name="preferences">Настройки</string>
@@ -117,7 +117,7 @@
     </plurals>
     <string name="trial_purchase">Купить полную версию</string>
     <string name="trial_expired">Пробный режим завершен</string>
-    <string name="trial_expired_message">Чтобы продолжить пользоваться Tiny Tiny RSS пожалуйста купите полную версию.</string>
+    <string name="trial_expired_message">Чтобы продолжить пользоваться ttrssa пожалуйста купите полную версию.</string>
     <string name="theme_amber">Янтарь</string>
     <string name="reading">Чтение</string>
     <string name="offline_articles_to_download">Сколько статей скачивать</string>
@@ -129,7 +129,7 @@
     <string name="share_title_hint">Заголовок статьи</string>
     <string name="share_share_button">Поделиться</string>
     <string name="share_article_posted">Статья сохранена.</string>
-    <string name="subscribe_name">Подписаться в Tiny Tiny RSS</string>
+    <string name="subscribe_name">Подписаться в ttrssa</string>
     <string name="feed_url">URL канала</string>
     <string name="subscribe_to_feed">Подписаться на канал</string>
     <string name="error_while_subscribing">Ошибка во время подписки.</string>
@@ -227,7 +227,7 @@
     <string name="transport_debugging">Журнал отправленных и полученных данных</string>
     <string name="notify_downloading_init">Начало загрузки…</string>
     <string name="notify_downloading_feeds">Скачиваю каналы…</string>
-    <string name="api_too_low">Для этого действия требуется более новая версия Tiny Tiny RSS</string>
+    <string name="api_too_low">Для этого действия требуется более новая версия ttrssa</string>
     <string name="author_formatted">%1$s</string>
     <plurals name="n_unread_articles">
         <item quantity="one">%1$d непрочитанная статья</item>
@@ -243,7 +243,7 @@
     <string name="prefs_version">%1$s (%2$d)</string>
     <string name="prefs_build_timestamp">%1$s</string>
     <string name="prefs_build_timestamp_title">Построить временную метку</string>
-    <string name="crash_dialog_text">К сожалению, Tiny Tiny RSS был остановлен. Отправить отчет о сбое на tt-rss.org\?</string>
+    <string name="crash_dialog_text">К сожалению, ttrssa был остановлен. Отправить отчет о сбое на tt-rss.org\?</string>
     <string name="offline_no_articles">Нет загруженных статей</string>
     <string name="prefs_enable_image_downsampling_long">Просить серверную часть уменьшить изображения, если не по Wi-Fi. Требуется дополнение (ttrss-api-resize)</string>
     <string name="prefs_enable_image_downsampling">Автоматическое изменение размеров изображений</string>
@@ -274,7 +274,7 @@
     <string name="catchup_dialog_title_search">Отметить результаты поиска в %1$s как прочитанные?</string>
     <string name="article_edit_note">Править заметку</string>
     <string name="error_success">Операция успешно завершена</string>
-    <string name="crash_dialog_text_email">К сожалению, Tiny Tiny RSS был закрыт. Отправить отчёт о сбое на tt-rss.org?</string>
+    <string name="crash_dialog_text_email">К сожалению, ttrssa был закрыт. Отправить отчёт о сбое на tt-rss.org?</string>
     <string name="force_phone_layout">Принудительно использовать вид для телефонов</string>
     <string name="catchup_dialog_1week">Старше недели</string>
     <string name="catchup_dialog_2week">Старше двух недель</string>

@@ -11,7 +11,7 @@
     <string name="debugging">Depuración</string>
     <string name="default_url">http://exemplo.dominio/tt-rss/</string>
     <string name="pref_theme">Decorado</string>
-    <string name="ttrss_url">URL de Tiny Tiny RSS</string>
+    <string name="ttrss_url">URL de ttrssa</string>
     <string name="theme_light">Claro</string>
     <string name="theme_dark">Escuro</string>
     <string name="http_authentication">Autenticación HTTP</string>

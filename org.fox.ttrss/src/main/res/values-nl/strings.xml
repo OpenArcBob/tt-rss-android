@@ -10,7 +10,7 @@
     <string name="default_url">http://voorbeeld.domein/tt-rss/</string>
     <string name="look_and_feel">Interface</string>
     <string name="pref_theme">Thema</string>
-    <string name="ttrss_url">Tiny Tiny RSS URL</string>
+    <string name="ttrss_url">ttrssa URL</string>
     <string name="theme_light">Licht</string>
     <string name="theme_dark">Donker</string>
     <string name="preferences">Instellingen</string>
@@ -118,20 +118,20 @@
     </plurals>
     <string name="trial_purchase">Ontsluit volledige versie</string>
     <string name="trial_expired">Proefversie verlopen</string>
-    <string name="trial_expired_message">Om Tiny Tiny RSS te blijven gebruiken dien je de volledige versie te ontsluiten door de sleutel te kopen.</string>
+    <string name="trial_expired_message">Om ttrssa te blijven gebruiken dien je de volledige versie te ontsluiten door de sleutel te kopen.</string>
     <string name="theme_amber">Amber</string>
     <string name="reading">Aan het lezen</string>
     <string name="offline_articles_to_download">Aantal artikelen om te downloaden</string>
     <string name="offline_articles_to_download_long">Hoeveel artikelen downloaden voor offline-modus (nieuwste eerst)</string>
     <string name="pref_headlines_show_content_long">Toon inhoudvoorvertoning in lijst kopteksten</string>
     <string name="pref_headlines_show_content">Voorvertoon inhoud</string>
-    <string name="api_too_low">Deze actie vereist een nieuwere versie van Tiny Tiny RSS</string>
+    <string name="api_too_low">Deze actie vereist een nieuwere versie van ttrssa</string>
     <string name="share_url_hint">Artikel-URL</string>
     <string name="share_content_hint">Artikelinhoud</string>
     <string name="share_title_hint">Artikeltitel</string>
     <string name="share_share_button">Deel</string>
     <string name="share_article_posted">Artikel gedeeld.</string>
-    <string name="subscribe_name">Abonneer met Tiny Tiny RSS</string>
+    <string name="subscribe_name">Abonneer met ttrssa</string>
     <string name="feed_url">Feed-URL</string>
     <string name="subscribe_to_feed">Abonneer op feed</string>
     <string name="error_while_subscribing">Fout tijdens abonneren.</string>
@@ -202,7 +202,7 @@
     <string name="prefs_version_title">Versie</string>
     <string name="prefs_build_timestamp">%1$s</string>
     <string name="prefs_build_timestamp_title">Build tijdstip</string>
-    <string name="crash_dialog_text">Helaas, Tiny Tiny RSS is gestopt. Crashrapport indienen bij tt-rss.org\?</string>
+    <string name="crash_dialog_text">Helaas, ttrssa is gestopt. Crashrapport indienen bij tt-rss.org\?</string>
     <string name="prefs_widget_show_fresh">Laat Nieuwe artikelen zien</string>
     <string name="prefs_widget_show_fresh_summary">In plaats van totaal ongelezen laat aantal Nieuwe artikelen zien</string>
     <string name="prefs_widget">Widget</string>
@@ -278,7 +278,7 @@
     <string name="article_edit_note">Pas notitie aan</string>
     <string name="enable_dynamic_colors">Dynamische kleuren</string>
     <string name="error_success">Bewerking volledig afgehandeld</string>
-    <string name="crash_dialog_text_email">Helaas is Tiny Tiny RSS gestopt. Een crash-rapport versturen via e-mail?</string>
+    <string name="crash_dialog_text_email">Helaas is ttrssa gestopt. Een crash-rapport versturen via e-mail?</string>
     <string name="confirm_catchup_above_title">Markeer alle artikelen boven \"%1s\" als gelezen?</string>
     <string name="error_bad_request">Fout: 400 bad request</string>
     <string name="headlines_set_display_mode">Zet weergavemodus</string>

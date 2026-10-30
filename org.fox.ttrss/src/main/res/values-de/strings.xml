@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="login_in_progress">Anmelden…</string>
-    <string name="app_name">Tiny Tiny RSS</string>
+    <string name="app_name">ttrssa</string>
     <string name="login_need_configure">Bitte erst Einstellungen überprüfen.</string>
     <string name="login_ready">Bereit zur Anmeldung.</string>
     <string name="login_login">Anmelden</string>
@@ -12,7 +12,7 @@
     <string name="default_url">http://example.domain/tt-rss/</string>
     <string name="look_and_feel">Oberfläche</string>
     <string name="pref_theme">Theme</string>
-    <string name="ttrss_url">Tiny Tiny RSS URL</string>
+    <string name="ttrss_url">ttrssa URL</string>
     <string name="theme_light">Hell</string>
     <string name="theme_dark">Dunkel</string>
     <string name="preferences">Einstellungen</string>
@@ -127,7 +127,7 @@
     </plurals>
     <string name="trial_purchase">Vollversion freischalten</string>
     <string name="trial_expired">Testzeitraum abgelaufen</string>
-    <string name="trial_expired_message">Um Tiny Tiny RSS weiterhin nutzen zu können kaufen Sie bitte den Schlüssel.</string>
+    <string name="trial_expired_message">Um ttrssa weiterhin nutzen zu können kaufen Sie bitte den Schlüssel.</string>
     <string name="theme_sepia">Sepia</string>
     <string name="theme_amber">Bernstein</string>
     <string name="reading">Lesen</string>
@@ -135,13 +135,13 @@
     <string name="offline_articles_to_download_long">Anzahl der Artikel, die für den Offlinemodus heruntergeladen werden (Neueste zuerst)</string>
     <string name="pref_headlines_show_content_long">Zeige Artikelvorschau in der Listenansicht</string>
     <string name="pref_headlines_show_content">Zeige Artikelvorschau</string>
-    <string name="api_too_low">Dafür benötigen Sie eine neuere Version von Tiny Tiny RSS</string>
+    <string name="api_too_low">Dafür benötigen Sie eine neuere Version von ttrssa</string>
     <string name="share_url_hint">Artikel-URL</string>
     <string name="share_content_hint">Artikelinhalt</string>
     <string name="share_title_hint">Artikelüberschrift</string>
     <string name="share_share_button">Teilen</string>
     <string name="share_article_posted">Artikel abgeschickt.</string>
-    <string name="subscribe_name">Mit Tiny Tiny RSS abonnieren</string>
+    <string name="subscribe_name">Mit ttrssa abonnieren</string>
     <string name="feed_url">Feed-URL</string>
     <string name="subscribe_to_feed">Feed abonnieren</string>
     <string name="error_while_subscribing">Fehler beim Abonnieren.</string>
@@ -211,7 +211,7 @@
     <string name="prefs_version_title">Version</string>
     <string name="prefs_build_timestamp">%1$s</string>
     <string name="prefs_build_timestamp_title">Zeitpunkt des Kompilierens</string>
-    <string name="crash_dialog_text">Tiny Tiny RSS ist leider abgestürzt. Absturzbericht an tt-rss.org senden?</string>
+    <string name="crash_dialog_text">ttrssa ist leider abgestürzt. Absturzbericht an tt-rss.org senden?</string>
     <string name="prefs_widget_show_fresh">Zeige Anzahl neuer Artikel</string>
     <string name="prefs_widget_show_fresh_summary">Zeigt die Anzahl neuer Artikel anstatt aller ungelesener Artikel</string>
     <string name="prefs_widget">Widget</string>
@@ -299,7 +299,7 @@
     <string name="error_success">Vorgang erfolgreich abgeschlossen</string>
     <string name="error_bad_request">Fehler: 400 fehlerhafte Anfrage</string>
     <string name="confirm_catchup_above_title">Alle Artikel über \"%1s\" als gelesen markieren?</string>
-    <string name="crash_dialog_text_email">Leider wurde Tiny Tiny RSS angehalten. Absturzbericht via E-Mail senden?</string>
+    <string name="crash_dialog_text_email">Leider wurde ttrssa angehalten. Absturzbericht via E-Mail senden?</string>
     <string name="window_secure_mode_summary">Verhindert Screenshots und versteckt den Fensterinhalt auf unsicheren Displays</string>
     <string name="window_secure_mode">Sicherer-Fenster-Modus</string>
     <string name="enable_dynamic_colors_summary">Färbt die Oberfläche nach den Farbeinstellungen des Gerät</string>

@@ -10,7 +10,7 @@
     <string name="default_url">http://example.domain/tt-rss/</string>
     <string name="look_and_feel">Εμφάνιση εφαρμογής</string>
     <string name="pref_theme">Θέμα</string>
-    <string name="ttrss_url">Σύνδεσμος Tiny Tiny RSS</string>
+    <string name="ttrss_url">Σύνδεσμος ttrssa</string>
     <string name="theme_dark">Σκοτεινό</string>
     <string name="theme_light">Φωτεινό</string>
     <string name="preferences">Ρυθμίσεις</string>

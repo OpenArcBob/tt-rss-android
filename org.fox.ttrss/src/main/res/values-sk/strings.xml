@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="login_in_progress">Prihlásenie k serveru…</string>
-    <string name="app_name">Tiny Tiny RSS</string>
+    <string name="app_name">ttrssa</string>
     <string name="login_need_configure">Prosím, najskôr nastavte aplikáciu.</string>
     <string name="login_ready">Pripravený na prihlásenie.</string>
     <string name="login_login">Prihlásiť</string>
@@ -14,7 +14,7 @@
     <string name="default_url">http://example.domain/tt-rss/</string>
     <string name="look_and_feel">Rozhranie</string>
     <string name="pref_theme">Vzhľad</string>
-    <string name="ttrss_url">Tiny Tiny RSS URL</string>
+    <string name="ttrss_url">ttrssa URL</string>
     <string name="theme_dark">Tmavý</string>
     <string name="preferences">Nastavenia</string>
     <string name="theme_light">Svetlý</string>
@@ -119,20 +119,20 @@
     </plurals>
     <string name="trial_purchase">Odomknúť plnú verziu</string>
     <string name="trial_expired">Trial verzia vypršala</string>
-    <string name="trial_expired_message">Ak chcete pokračovať v používaní aplikácie Tiny Tiny RSS, prosím odomknite ju zakúpeným kľúčom.</string>
+    <string name="trial_expired_message">Ak chcete pokračovať v používaní aplikácie ttrssa, prosím odomknite ju zakúpeným kľúčom.</string>
     <string name="theme_sepia">Sépia</string>
     <string name="reading">Čítanie</string>
     <string name="offline_articles_to_download">Počet článkov na stiahnutie</string>
     <string name="offline_articles_to_download_long">Počet článkov na stiahnutie pre offline mód (najnovšie najskôr).</string>
     <string name="pref_headlines_show_content_long">Zobraziť obsah náhľadov v zozname nadpisov</string>
     <string name="pref_headlines_show_content">Náhľad obsahu článku</string>
-    <string name="api_too_low">Táto akcia vyžaduje novšiu verziu Tiny Tiny RSS serveru</string>
+    <string name="api_too_low">Táto akcia vyžaduje novšiu verziu ttrssa serveru</string>
     <string name="share_url_hint">URL článku</string>
     <string name="share_content_hint">Obsah článku</string>
     <string name="share_title_hint">Nadpis článku</string>
     <string name="share_share_button">Zdieľať</string>
     <string name="share_article_posted">Článok odoslaný.</string>
-    <string name="subscribe_name">Prihlásiť sa k Tiny Tiny RSS</string>
+    <string name="subscribe_name">Prihlásiť sa k ttrssa</string>
     <string name="feed_url">URL zdroja</string>
     <string name="error_while_subscribing">Chyba pri prihlasovaní.</string>
     <string name="category_list_updated">Seznam kategorií načítaný</string>
@@ -228,7 +228,7 @@
     <string name="confirm_catchup_above">Označiť články ako prečítané?</string>
     <string name="context_confirm_catchup">Zobraziť všetky články v %1$s ako prečítané?</string>
     <string name="context_selection_toggle_unread">(Ne)Prečítané</string>
-    <string name="crash_dialog_text">Bohužiaľ, Tiny Tiny RSS sa zastavila. Odoslať report pádu do tt-rss.org?</string>
+    <string name="crash_dialog_text">Bohužiaľ, ttrssa sa zastavila. Odoslať report pádu do tt-rss.org?</string>
     <string name="dialog_ok">OK</string>
     <string name="download_articles_and_go_offline">Stiahnuť články a prepnúť offline</string>
     <string name="error_loading_image">Chyba načítania obrázku.</string>

@@ -12,7 +12,7 @@
     <string name="default_url">http://example.domain/tt-rss/</string>
     <string name="look_and_feel">Interface</string>
     <string name="pref_theme">Theme</string>
-    <string name="ttrss_url">Tiny Tiny RSS URL</string>
+    <string name="ttrss_url">ttrssa URL</string>
     <string name="theme_light">Light</string>
     <string name="theme_dark">Dark</string>
     <string name="theme_yellowblack">Samsung High Contrast</string>
@@ -139,20 +139,20 @@
     </plurals>
     <string name="trial_purchase">Unlock full version</string>
     <string name="trial_expired">Trial expired</string>
-    <string name="trial_expired_message">To continue using Tiny Tiny RSS please unlock the full version by purchasing the key.</string>
+    <string name="trial_expired_message">To continue using ttrssa please unlock the full version by purchasing the key.</string>
     <string name="theme_amber">Amber</string>
     <string name="reading">Reading</string>
     <string name="offline_articles_to_download">Amount of articles to download</string>
     <string name="offline_articles_to_download_long">How many articles to download for offline mode (newest first)</string>
     <string name="pref_headlines_show_content_long">Show content previews in headlines list</string>
     <string name="pref_headlines_show_content">Show content preview</string>
-    <string name="api_too_low">This action requires newer version of Tiny Tiny RSS</string>
+    <string name="api_too_low">This action requires newer version of ttrssa</string>
     <string name="share_url_hint">Article URL</string>
     <string name="share_content_hint">Article Content</string>
     <string name="share_title_hint">Article Title</string>
     <string name="share_share_button">Share</string>
     <string name="share_article_posted">Article posted.</string>
-    <string name="subscribe_name">Subscribe with Tiny Tiny RSS</string>
+    <string name="subscribe_name">Subscribe with ttrssa</string>
     <string name="feed_url">Feed URL</string>
     <string name="subscribe_to_feed">Subscribe to feed</string>
     <string name="error_while_subscribing">Error while subscribing.</string>
@@ -230,8 +230,8 @@
     <string name="prefs_version_title">Version</string>
     <string name="prefs_build_timestamp">%1$s</string>
     <string name="prefs_build_timestamp_title">Build timestamp</string>
-    <string name="crash_dialog_text">Unfortunately, Tiny Tiny RSS has stopped. Submit crash report to tt-rss.org?</string>
-    <string name="crash_dialog_text_email">Unfortunately, Tiny Tiny RSS has stopped. Submit crash report via email?</string>
+    <string name="crash_dialog_text">Unfortunately, ttrssa has stopped. Submit crash report to tt-rss.org?</string>
+    <string name="crash_dialog_text_email">Unfortunately, ttrssa has stopped. Submit crash report via email?</string>
     <string name="prefs_widget_show_fresh">Show Fresh articles</string>
     <string name="prefs_widget_show_fresh_summary">Instead of total unread display amount of Fresh articles</string>
     <string name="prefs_widget">Widget</string>

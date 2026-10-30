@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="login_in_progress">Connexion…</string>
-    <string name="app_name">Tiny Tiny RSS</string>
+    <string name="app_name">ttrssa</string>
     <string name="login_need_configure">Veuillez d\'abord configurer l\'application.</string>
     <string name="login_ready">Prêt à se connecter.</string>
     <string name="login_login">Connexion</string>
@@ -12,7 +12,7 @@
     <string name="default_url">http://exemple.domaine/tt-rss/</string>
     <string name="look_and_feel">Interface</string>
     <string name="pref_theme">Thème</string>
-    <string name="ttrss_url">URL de Tiny Tiny RSS</string>
+    <string name="ttrss_url">URL de ttrssa</string>
     <string name="theme_light">Clair</string>
     <string name="theme_dark">Sombre</string>
     <string name="preferences">Préférences</string>
@@ -130,7 +130,7 @@
     </plurals>
     <string name="trial_purchase">Débloquer la version complète</string>
     <string name="trial_expired">La période d\'évaluation a expiré</string>
-    <string name="trial_expired_message">Pour continuer à utiliser Tiny Tiny RSS merci de débloquer la version complète en achetant la clé.</string>
+    <string name="trial_expired_message">Pour continuer à utiliser ttrssa merci de débloquer la version complète en achetant la clé.</string>
     <string name="theme_sepia">Sépia</string>
     <string name="theme_amber">Ambre</string>
     <string name="reading">Lecture</string>
@@ -138,13 +138,13 @@
     <string name="offline_articles_to_download_long">Nombre d\'articles à télécharger pour la lecture hors ligne (les plus récents en premier)</string>
     <string name="pref_headlines_show_content_long">Afficher un aperçu du contenu dans les titres</string>
     <string name="pref_headlines_show_content">Afficher un aperçu</string>
-    <string name="api_too_low">Vous devez utiliser une version plus récente de Tiny Tiny RSS pour réaliser cette action</string>
+    <string name="api_too_low">Vous devez utiliser une version plus récente de ttrssa pour réaliser cette action</string>
     <string name="share_url_hint">URL de l\'article</string>
     <string name="share_content_hint">Contenu de l\'article</string>
     <string name="share_title_hint">Titre de l\'article</string>
     <string name="share_share_button">Partager</string>
     <string name="share_article_posted">Article publié.</string>
-    <string name="subscribe_name">S\'abonner avec Tiny Tiny RSS</string>
+    <string name="subscribe_name">S\'abonner avec ttrssa</string>
     <string name="feed_url">URL du flux</string>
     <string name="subscribe_to_feed">S\'abonner au flux</string>
     <string name="error_while_subscribing">Une erreur s\'est produite lors de l\'abonnement.</string>
@@ -215,7 +215,7 @@
     <string name="prefs_version_title">Version</string>
     <string name="prefs_build_timestamp">%1$s</string>
     <string name="prefs_build_timestamp_title">Horodatage de compilation</string>
-    <string name="crash_dialog_text">Malheureusement, Tiny Tiny RSS s\'est arrêté. Envoyer un rapport de crash à tt-rss.org \?</string>
+    <string name="crash_dialog_text">Malheureusement, ttrssa s\'est arrêté. Envoyer un rapport de crash à tt-rss.org \?</string>
     <string name="prefs_widget_show_fresh">Afficher les articles récents</string>
     <string name="prefs_widget_show_fresh_summary">Afficher le nombre d\'articles récents plutôt que le total d\'articles non lus</string>
     <string name="prefs_widget">Widget</string>
@@ -301,7 +301,7 @@
     <string name="catchup_dialog_title">Marquer %1$s comme lu ?</string>
     <string name="headlines_display_mode">Changer l’affichage</string>
     <string name="article_edit_note">Modifier la note</string>
-    <string name="crash_dialog_text_email">Malheureusement, Tiny Tiny RSS s\'est arrêté. Soumettre un rapport d\'incident par e-mail ?</string>
+    <string name="crash_dialog_text_email">Malheureusement, ttrssa s\'est arrêté. Soumettre un rapport d\'incident par e-mail ?</string>
     <string name="error_success">Opération terminée avec succès</string>
     <string name="error_bad_request">Erreur : 400 mauvaise requête</string>
     <string name="headlines_set_display_mode">Définir le mode d\'affichage</string>

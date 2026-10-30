@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="login_in_progress">Accesso…</string>
-    <string name="app_name">Tiny Tiny RSS</string>
+    <string name="app_name">ttrssa</string>
     <string name="login_need_configure">Si prega di configurare l\'app prima.</string>
     <string name="login_ready">Pronto per l\'accesso.</string>
     <string name="login_login">Accedi</string>
@@ -12,7 +12,7 @@
     <string name="default_url">http://esempio.dominio/tt-rss/</string>
     <string name="look_and_feel">Interfaccia</string>
     <string name="pref_theme">Tema</string>
-    <string name="ttrss_url">URL di Tiny Tiny RSS</string>
+    <string name="ttrss_url">URL di ttrssa</string>
     <string name="theme_light">Chiaro</string>
     <string name="theme_dark">Scuro</string>
     <string name="preferences">Preferenze</string>
@@ -129,7 +129,7 @@
     </plurals>
     <string name="trial_purchase">Sblocca la versione completa</string>
     <string name="trial_expired">Demo esaurita</string>
-    <string name="trial_expired_message">Per continuare ad usare Tiny Tiny RSS per Android puoi sbloccare la versione completa acquistando l\'app chiave.</string>
+    <string name="trial_expired_message">Per continuare ad usare ttrssa per Android puoi sbloccare la versione completa acquistando l\'app chiave.</string>
     <string name="theme_sepia">Seppia</string>
     <string name="theme_amber">Ambra</string>
     <string name="reading">Lettura</string>
@@ -137,13 +137,13 @@
     <string name="offline_articles_to_download_long">Quanti articoli scaricare per la modalità non in linea (i più recenti per primi))</string>
     <string name="pref_headlines_show_content_long">Mostra anteprima contenuti nella lista dei titoli</string>
     <string name="pref_headlines_show_content">Anteprima contenuti</string>
-    <string name="api_too_low">Questa azione richiede una versione più aggiornata di Tiny Tiny RSS</string>
+    <string name="api_too_low">Questa azione richiede una versione più aggiornata di ttrssa</string>
     <string name="share_url_hint">URL Articolo</string>
     <string name="share_content_hint">Contenuto Articolo</string>
     <string name="share_title_hint">Titolo Articolo</string>
     <string name="share_share_button">Condividi</string>
     <string name="share_article_posted">Articolo pubblicato.</string>
-    <string name="subscribe_name">Sottoscrivi con Tiny Tiny RSS</string>
+    <string name="subscribe_name">Sottoscrivi con ttrssa</string>
     <string name="feed_url">URL notiziario</string>
     <string name="subscribe_to_feed">Sottoscrivi il notiziario</string>
     <string name="error_while_subscribing">Errore durante la sottoscrizione.</string>
@@ -214,7 +214,7 @@
     <string name="prefs_version_title">Versione</string>
     <string name="prefs_build_timestamp">%1$s</string>
     <string name="prefs_build_timestamp_title">Ora della compilazione</string>
-    <string name="crash_dialog_text">Sfortunatamente, Tiny Tiny RSS si è arrestato. Inviare il report dell\'arresto a tt-rss.org?</string>
+    <string name="crash_dialog_text">Sfortunatamente, ttrssa si è arrestato. Inviare il report dell\'arresto a tt-rss.org?</string>
     <string name="prefs_widget_show_fresh">Mostra nuovi articoli</string>
     <string name="prefs_widget_show_fresh_summary">Invece del totale degli articoli non letti, mostra il numero di nuovi articoli</string>
     <string name="prefs_widget">Widget</string>
@@ -305,7 +305,7 @@
     <string name="article_enable_javascript">Attiva JavaScript</string>
     <string name="error_bad_request">Errore: 400 bad request</string>
     <string name="window_secure_mode_summary">Disattiva gli screenshot e nascondi la finestra dei contenuti su schermi non sicuri</string>
-    <string name="crash_dialog_text_email">Sfortunatamente, Tiny Tiny RSS ha smesso di funzionare. Vuoi inviare un report via email?</string>
+    <string name="crash_dialog_text_email">Sfortunatamente, ttrssa ha smesso di funzionare. Vuoi inviare un report via email?</string>
     <string name="error_success">Operazione completata con successo</string>
     <string name="headlines_set_display_mode">Imposta la modalità video</string>
     <string name="confirm_catchup_above_title">Vuoi segnare come letti tutti gli articoli prima di \"%1s\"?</string>

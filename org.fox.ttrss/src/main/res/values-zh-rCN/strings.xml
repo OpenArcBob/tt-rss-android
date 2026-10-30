@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Tiny Tiny RSS</string>
+    <string name="app_name">ttrssa</string>
     <string name="accel_webview_title">Web Views加速(3.0+)</string>
     <string name="action_settings">设置</string>
-    <string name="api_too_low">此操作需要新版的 Tiny Tiny RSS</string>
+    <string name="api_too_low">此操作需要新版的 ttrssa</string>
     <string name="article_img_view_caption">查看图片标题</string>
     <string name="accel_webview_summary">如果出现闪烁或毛刺现象请关闭</string>
     <string name="article_link_copy">复制链接到剪贴板</string>
@@ -27,7 +27,7 @@
     <string name="connection">连接</string>
     <string name="context_confirm_catchup">您要标记所有%1$s篇文章为已读吗？</string>
     <string name="context_selection_toggle_unread">已读/未读</string>
-    <string name="crash_dialog_text">很抱歉，Tiny Tiny RSS 已停止运行。您愿意提交崩溃报告到 tt-rss.org 吗？</string>
+    <string name="crash_dialog_text">很抱歉，ttrssa 已停止运行。您愿意提交崩溃报告到 tt-rss.org 吗？</string>
     <string name="debugging">调试</string>
     <string name="default_url">http://example.domain/tt-rss/</string>
     <string name="dialog_cancel">取消</string>
@@ -166,7 +166,7 @@
     <string name="ssl_trust_any_host">不验证主机名</string>
     <string name="ssl_trust_any_host_long">不会验证主机名</string>
     <string name="ssl_trust_any_long">接受所有SSL证书而不进行验证</string>
-    <string name="subscribe_name">使用 Tiny Tiny RSS 订阅</string>
+    <string name="subscribe_name">使用 ttrssa 订阅</string>
     <string name="subscribe_to_feed">订阅供稿</string>
     <string name="subscribed_to_feed">已订阅的供稿</string>
     <string name="synchronize_read_articles_and_go_online">同步已读文章并联网</string>
@@ -178,9 +178,9 @@
     <string name="toggle_sort_order">切换新旧顺序</string>
     <string name="transport_debugging">记录发送和接受的数据</string>
     <string name="trial_expired">试用已到期</string>
-    <string name="trial_expired_message">若要继续使用 Tiny Tiny RSS 请购买并解锁完整版本。</string>
+    <string name="trial_expired_message">若要继续使用 ttrssa 请购买并解锁完整版本。</string>
     <string name="trial_purchase">解锁完整版本</string>
-    <string name="ttrss_url">Tiny Tiny RSS 网址</string>
+    <string name="ttrss_url">ttrssa 网址</string>
     <string name="ttrss_url_summary">https://example.com/tt-rss</string>
     <string name="unread_only">仅未读</string>
     <string name="unsubscribe">取消订阅</string>
@@ -280,7 +280,7 @@
     <string name="enable_icon_tinting">启用图标着色</string>
     <string name="enable_icon_tinting_summary">如果由于图标的颜色而无法区分图标，请禁用</string>
     <string name="expand_special_cat">展开特殊类别</string>
-    <string name="crash_dialog_text_email">抱歉，Tiny Tiny RSS已经崩溃。通过电子邮件提交崩溃报告？</string>
+    <string name="crash_dialog_text_email">抱歉，ttrssa已经崩溃。通过电子邮件提交崩溃报告？</string>
     <string name="window_secure_mode_summary">禁用屏幕截图并隐藏非安全显示器上的窗口内容</string>
     <string name="headline_display_mode_split">分割视图：图左文右</string>
     <string name="confirm_catchup_above_title">将 \"%1s“上面的所有文章标记为已读吗？</string>

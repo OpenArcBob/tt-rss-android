@@ -1,1 +1,1 @@
-Android client for the Tiny Tiny RSS self-hosted feed reader.
+Android client for the ttrssa self-hosted feed reader.

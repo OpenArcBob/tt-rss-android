@@ -13,7 +13,7 @@
     <string name="login_ready">Oturum açmaya hazır.</string>
     <string name="look_and_feel">Arayüz</string>
     <string name="pref_theme">Tema</string>
-    <string name="ttrss_url">Tiny Tiny RSS URL\'si</string>
+    <string name="ttrss_url">ttrssa URL\'si</string>
     <string name="connection">Bağlantı</string>
     <string name="http_authentication">HTTP Kimlik Doğrulaması</string>
     <string name="loading_message">Yükleniyor, lütfen bekleyin…</string>
@@ -102,18 +102,18 @@
     </plurals>
     <string name="trial_purchase">Tam sürümün kilidini aç</string>
     <string name="trial_expired">Deneme süresi doldu</string>
-    <string name="trial_expired_message">Tiny Tiny RSS kullanmaya devam etmek için lütfen anahtarı satın alarak tam sürümün kilidini açın.</string>
+    <string name="trial_expired_message">ttrssa kullanmaya devam etmek için lütfen anahtarı satın alarak tam sürümün kilidini açın.</string>
     <string name="offline_articles_to_download">İndirilecek yazı sayısı</string>
     <string name="offline_articles_to_download_long">Çevrim dışı mod için indirilecek yazı sayısı ( önce en yeniler)</string>
     <string name="pref_headlines_show_content_long">Başlık listesinde içerik ön izlemelerini göster</string>
     <string name="pref_headlines_show_content">İçerik ön izlemesini göster</string>
-    <string name="api_too_low">Bu eylem daha yeni Tiny Tiny RSS sürümü gerektirir</string>
+    <string name="api_too_low">Bu eylem daha yeni ttrssa sürümü gerektirir</string>
     <string name="share_url_hint">Yazı URL\'si</string>
     <string name="share_content_hint">Yazı İçeriği</string>
     <string name="share_title_hint">Yazı Başlığı</string>
     <string name="share_share_button">Paylaş</string>
     <string name="share_article_posted">Yazı gönderildi.</string>
-    <string name="subscribe_name">Tiny Tiny RSS ile abone ol</string>
+    <string name="subscribe_name">ttrssa ile abone ol</string>
     <string name="feed_url">Özet akışı internet adresi</string>
     <string name="subscribe_to_feed">Özet akışına abone ol</string>
     <string name="error_while_subscribing">Abone olurken hata oluştu.</string>

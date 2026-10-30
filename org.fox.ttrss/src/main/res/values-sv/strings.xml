@@ -10,7 +10,7 @@
     <string name="default_url">http://exempel.doman/tt-rss/</string>
     <string name="look_and_feel">Gränssnitt</string>
     <string name="pref_theme">Tema</string>
-    <string name="ttrss_url">URL för Tiny Tiny RSS</string>
+    <string name="ttrss_url">URL för ttrssa</string>
     <string name="theme_light">Ljus</string>
     <string name="theme_dark">Mörk</string>
     <string name="preferences">Inställningar</string>
@@ -118,20 +118,20 @@
     </plurals>
     <string name="trial_purchase">Lås upp fullversionen</string>
     <string name="trial_expired">Demotiden utgången</string>
-    <string name="trial_expired_message">För att fortsätta använda Tiny Tiny RSS, vänligen lås upp fullversionen genom att köpa nyckeln.</string>
+    <string name="trial_expired_message">För att fortsätta använda ttrssa, vänligen lås upp fullversionen genom att köpa nyckeln.</string>
     <string name="theme_amber">Bärnsten</string>
     <string name="reading">Läsning</string>
     <string name="offline_articles_to_download">Mängd artiklar som ska laddas ned</string>
     <string name="offline_articles_to_download_long">Hur många artiklar som ska laddas ned för offline-läge (nyaste först)</string>
     <string name="pref_headlines_show_content_long">Visa förhandsgranskning av innehåll i lista över rubriker</string>
     <string name="pref_headlines_show_content">Förhandsgranska artikelinnehåll</string>
-    <string name="api_too_low">Detta kräver en nyare version av Tiny Tiny RSS</string>
+    <string name="api_too_low">Detta kräver en nyare version av ttrssa</string>
     <string name="share_url_hint">Artikel-URL</string>
     <string name="share_content_hint">Artikelinnehåll</string>
     <string name="share_title_hint">Artikeltitel</string>
     <string name="share_share_button">Dela</string>
     <string name="share_article_posted">Artikel skickad.</string>
-    <string name="subscribe_name">Prenumerera med Tiny Tiny RSS</string>
+    <string name="subscribe_name">Prenumerera med ttrssa</string>
     <string name="feed_url">Flödes-URL</string>
     <string name="subscribe_to_feed">Prenumerera på flöde</string>
     <string name="error_while_subscribing">Fel vid skapande av prenumeration.</string>
@@ -198,7 +198,7 @@
     <string name="prefs_version_title">Version</string>
     <string name="prefs_build_timestamp">%1$s</string>
     <string name="prefs_build_timestamp_title">Tidpunkt för kompilering</string>
-    <string name="crash_dialog_text">Tiny Tiny RSS har dessvärre slutat fungera. Skicka kraschrapport till tt-rss.org\?</string>
+    <string name="crash_dialog_text">ttrssa har dessvärre slutat fungera. Skicka kraschrapport till tt-rss.org\?</string>
     <string name="prefs_widget_show_fresh">Visa Färska artiklar</string>
     <string name="prefs_widget_show_fresh_summary">Visa antal Färska artiklar iställar för totalt antal olästa</string>
     <string name="title_activity_video_player">Videospelare</string>
