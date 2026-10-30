@@ -129,7 +129,7 @@
     </plurals>
     <string name="trial_purchase">Sblocca la versione completa</string>
     <string name="trial_expired">Demo esaurita</string>
-    <string name="trial_expired_message">Per continuare ad usare ttrssa per Android puoi sbloccare la versione completa acquistando l\'app chiave.</string>
+    <string name="trial_expired_message">Per continuare ad usare ttrssa puoi sbloccare la versione completa acquistando l\'app chiave.</string>
     <string name="theme_sepia">Seppia</string>
     <string name="theme_amber">Ambra</string>
     <string name="reading">Lettura</string>

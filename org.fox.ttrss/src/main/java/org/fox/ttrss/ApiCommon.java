@@ -366,7 +366,7 @@ public class ApiCommon {
                     getPackageInfo(context.getPackageName(), 0);
 
             return String.format(Locale.ENGLISH,
-                    "ttrssa (Android) %1$s (%2$d) %3$s",
+                    "ttrssa %1$s (%2$d) %3$s",
                     packageInfo.versionName,
                     PackageInfoCompat.getLongVersionCode(packageInfo),
                     System.getProperty("http.agent"));
@@ -375,7 +375,7 @@ public class ApiCommon {
             e.printStackTrace();
 
             return String.format(Locale.ENGLISH,
-                    "ttrssa (Android) Unknown %1$s",
+                    "ttrssa Unknown %1$s",
                     System.getProperty("http.agent"));
         }
     }

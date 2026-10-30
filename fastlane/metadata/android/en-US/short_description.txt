@@ -1,1 +1,1 @@
-Android client for the ttrssa self-hosted feed reader.
+Client for the ttrssa self-hosted feed reader.

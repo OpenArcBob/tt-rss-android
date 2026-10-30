@@ -1,5 +1,5 @@
-ttrssa client for Android
-================================
+ttrssa
+======
 
 ## Some notes about this project
 

@@ -1,2 +1,2 @@
 include ':org.fox.ttrss'
-rootProject.name='ttrssa for Android'
+rootProject.name='ttrssa'
