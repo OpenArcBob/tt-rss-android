@@ -100,7 +100,7 @@
         android:title="@string/headlines" >
 
         <SeekBarPreference
-            app:defaultValue="13"
+            app:defaultValue="14"
             app:min="12"
             android:max="21"
             app:showSeekBarValue="true"
@@ -170,7 +170,7 @@
 
     <PreferenceCategory android:title="@string/reading" >
         <SeekBarPreference
-            app:defaultValue="16"
+            app:defaultValue="14"
             app:min="12"
             android:max="32"
             app:showSeekBarValue="true"

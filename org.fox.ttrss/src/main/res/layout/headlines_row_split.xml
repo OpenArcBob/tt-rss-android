@@ -187,7 +187,7 @@
                     android:paddingStart="0dp"
                     android:paddingEnd="0dp"
                     tools:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    android:textSize="13sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
 

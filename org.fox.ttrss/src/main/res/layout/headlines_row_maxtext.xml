@@ -43,7 +43,7 @@
             android:textAlignment="viewStart"
             android:lineSpacingExtra="1sp"
             android:maxLines="5"
-            android:textSize="13sp"
+            android:textSize="14sp"
             tools:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
 
     </LinearLayout>

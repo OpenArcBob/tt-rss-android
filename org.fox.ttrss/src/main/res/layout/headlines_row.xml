@@ -183,7 +183,7 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 tools:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                android:textSize="13sp" />
+                android:textSize="14sp" />
         </TableRow>
 
         <TableRow

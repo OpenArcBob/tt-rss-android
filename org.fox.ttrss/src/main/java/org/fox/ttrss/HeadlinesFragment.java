@@ -786,7 +786,7 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
             m_colorTertiaryContainer = colorFromAttr(R.attr.colorTertiaryContainer);
             m_colorOnTertiaryContainer = 0xFFFFEB3B;
 
-            m_headlineFontSize = m_prefs.getInt("headlines_font_size_sp_int", 13);
+            m_headlineFontSize = m_prefs.getInt("headlines_font_size_sp_int", 14);
             m_headlineSmallFontSize = Math.max(10, Math.min(18, m_headlineFontSize - 2));
 
             m_enableIconTinting = m_prefs.getBoolean("enable_icon_tinting", true);

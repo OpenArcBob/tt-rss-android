@@ -72,7 +72,7 @@
             android:layout_height="match_parent"
             tools:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             android:textColor="?colorSecondary"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:layout_marginTop="4dp" />
     </LinearLayout>
 

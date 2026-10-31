@@ -103,7 +103,7 @@ public class ArticleFragment extends androidx.fragment.app.Fragment {
             return view;
         }
 
-        m_articleFontSize = m_prefs.getInt("article_font_size_sp_int", 16);
+        m_articleFontSize = m_prefs.getInt("article_font_size_sp_int", 14);
         m_articleSmallFontSize = Math.max(10, Math.min(18, m_articleFontSize - 2));
 
         TextView title = view.findViewById(R.id.title);

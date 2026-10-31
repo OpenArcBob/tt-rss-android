@@ -383,22 +383,21 @@ public class FeedsFragment extends Fragment implements OnSharedPreferenceChangeL
                 holder.icon.setImageResource(getIconForFeed(feed));
             }
 
+            int headlineFontSize = m_prefs != null ? m_prefs.getInt("headlines_font_size_sp_int", 14) : 14;
+            int feedFontSize = Math.max(10, headlineFontSize - 1);
+
             if (holder.title != null) {
                 holder.title.setText(feed.title);
-
-                if (feed.always_open_headlines || (!feed.is_cat && feed.id == -4)) {
-                    holder.title.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
-                } else {
-                    holder.title.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
-                }
-
+                holder.title.setTextSize(TypedValue.COMPLEX_UNIT_SP, feedFontSize);
+                holder.title.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
                 holder.title.setTextColor(ColorStateList.valueOf(0xFFFFEB3B));
-
                 holder.title.setAlpha(feed.update_interval == -1 ? 0.5f : 1f);
             }
 
             if (holder.unreadCounter != null) {
                 holder.unreadCounter.setText(String.valueOf(feed.unread));
+                holder.unreadCounter.setTextSize(TypedValue.COMPLEX_UNIT_SP, feedFontSize);
+                holder.unreadCounter.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
                 holder.unreadCounter.setTextColor(ColorStateList.valueOf(0xFFFFEB3B));
                 holder.unreadCounter.setVisibility((feed.unread > 0) ? View.VISIBLE : View.INVISIBLE);
             }
@@ -520,7 +519,7 @@ public class FeedsFragment extends Fragment implements OnSharedPreferenceChangeL
 
         // Can't access ViewModels from detached fragment (= backstack)
         if (isAdded()) {
-            String[] filter = new String[]{"sort_feeds_by_unread", "show_unread_only"};
+            String[] filter = new String[]{"sort_feeds_by_unread", "show_unread_only", "headlines_font_size_sp_int"};
 
             if (Arrays.asList(filter).contains(key))
                 refresh();

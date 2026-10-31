@@ -303,7 +303,8 @@ public class CommonActivity extends AppCompatActivity implements SharedPreferenc
 
         String[] filter = new String[]{"theme", "headline_mode", "enable_dynamic_colors", "enable_cats", "widget_update_interval",
                 "headlines_swipe_to_dismiss", "headlines_mark_read_scroll", "headlines_request_size",
-                "force_phone_layout", "open_on_startup", "window_secure_mode", "enable_icon_tinting"};
+                "force_phone_layout", "open_on_startup", "window_secure_mode", "enable_icon_tinting",
+                "headlines_font_size_sp_int", "article_font_size_sp_int"};
 
         m_needRestart = Arrays.asList(filter).contains(key);
     }
