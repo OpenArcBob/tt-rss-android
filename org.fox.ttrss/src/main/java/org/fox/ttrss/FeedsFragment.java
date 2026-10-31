@@ -294,6 +294,10 @@ public class FeedsFragment extends Fragment implements OnSharedPreferenceChangeL
 
         setSelectedFeed(m_activity.getActiveFeed());
 
+        if (m_adapter != null) {
+            m_adapter.notifyDataSetChanged();
+        }
+
         refresh();
     }
 
@@ -384,7 +388,7 @@ public class FeedsFragment extends Fragment implements OnSharedPreferenceChangeL
             }
 
             int headlineFontSize = m_prefs != null ? m_prefs.getInt("headlines_font_size_sp_int", 14) : 14;
-            int feedFontSize = Math.max(10, headlineFontSize - 1);
+            int feedFontSize = Math.max(10, headlineFontSize);
 
             if (holder.title != null) {
                 holder.title.setText(feed.title);
@@ -521,8 +525,12 @@ public class FeedsFragment extends Fragment implements OnSharedPreferenceChangeL
         if (isAdded()) {
             String[] filter = new String[]{"sort_feeds_by_unread", "show_unread_only", "headlines_font_size_sp_int"};
 
-            if (Arrays.asList(filter).contains(key))
+            if (Arrays.asList(filter).contains(key)) {
+                if (m_adapter != null) {
+                    m_adapter.notifyDataSetChanged();
+                }
                 refresh();
+            }
         }
     }
 

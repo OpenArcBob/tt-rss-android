@@ -4,7 +4,9 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -90,9 +93,11 @@ public class SubscribeActivity extends CommonShareActivity {
         m_progressBar = findViewById(R.id.subscribe_progress);
         Spinner catList = findViewById(R.id.category_spinner);
 
+        int headlineFontSize = m_prefs != null ? m_prefs.getInt("headlines_font_size_sp_int", 14) : 14;
+
         if (m_cats.isEmpty()) m_cats.add(new Feed(0, "Uncategorized", true));
 
-        m_catAdapter = new CatListAdapter(this, android.R.layout.simple_spinner_dropdown_item, m_cats);
+        m_catAdapter = new CatListAdapter(this, android.R.layout.simple_spinner_dropdown_item, m_cats, headlineFontSize);
         catList.setAdapter(m_catAdapter);
 
         final Spinner feedList = findViewById(R.id.feed_spinner);
@@ -113,7 +118,7 @@ public class SubscribeActivity extends CommonShareActivity {
             }
         });
 
-        m_feedAdapter = new FeedListAdapter(this, android.R.layout.simple_spinner_dropdown_item, m_feeds);
+        m_feedAdapter = new FeedListAdapter(this, android.R.layout.simple_spinner_dropdown_item, m_feeds, headlineFontSize);
 
         feedList.setAdapter(m_feedAdapter);
 
@@ -306,12 +311,32 @@ public class SubscribeActivity extends CommonShareActivity {
 
     private static class CatListAdapter extends ArrayAdapter<String> {
         private final List<Feed> m_items;
+        private final int m_fontSize;
 
         public CatListAdapter(Context context, int resource,
-                              List<Feed> items) {
+                              List<Feed> items, int fontSize) {
             super(context, resource);
 
             m_items = items;
+            m_fontSize = fontSize;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View v = super.getView(position, convertView, parent);
+            if (v instanceof TextView) {
+                ((TextView) v).setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+            }
+            return v;
+        }
+
+        @Override
+        public View getDropDownView(int position, View convertView, ViewGroup parent) {
+            View v = super.getDropDownView(position, convertView, parent);
+            if (v instanceof TextView) {
+                ((TextView) v).setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+            }
+            return v;
         }
 
         @Override
@@ -335,11 +360,31 @@ public class SubscribeActivity extends CommonShareActivity {
 
     private static class FeedListAdapter extends ArrayAdapter<String> {
         private final List<Map.Entry<String, JsonElement>> m_items;
+        private final int m_fontSize;
 
-        public FeedListAdapter(Context context, int resource, List<Map.Entry<String, JsonElement>> items) {
+        public FeedListAdapter(Context context, int resource, List<Map.Entry<String, JsonElement>> items, int fontSize) {
             super(context, resource);
 
             m_items = items;
+            m_fontSize = fontSize;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View v = super.getView(position, convertView, parent);
+            if (v instanceof TextView) {
+                ((TextView) v).setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+            }
+            return v;
+        }
+
+        @Override
+        public View getDropDownView(int position, View convertView, ViewGroup parent) {
+            View v = super.getDropDownView(position, convertView, parent);
+            if (v instanceof TextView) {
+                ((TextView) v).setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+            }
+            return v;
         }
 
         @Override
