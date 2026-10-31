@@ -168,14 +168,17 @@ public class FeedsFragment extends Fragment implements OnSharedPreferenceChangeL
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_feeds, container, false);
+        view.setBackgroundColor(0xFF0D0D0D);
 
         m_swipeLayout = view.findViewById(R.id.feeds_swipe_container);
+        m_swipeLayout.setBackgroundColor(0xFF0D0D0D);
 
         m_swipeLayout.setOnRefreshListener(this::refresh);
 
         m_loadingProgress = view.findViewById(R.id.loading_progress);
 
         m_list = view.findViewById(R.id.feeds);
+        m_list.setBackgroundColor(0xFF0D0D0D);
         registerForContextMenu(m_list);
 
         m_layoutManager = new LinearLayoutManager(m_activity.getApplicationContext());
@@ -390,11 +393,16 @@ public class FeedsFragment extends Fragment implements OnSharedPreferenceChangeL
             int headlineFontSize = m_prefs != null ? m_prefs.getInt("headlines_font_size_sp_int", 14) : 14;
             int feedFontSize = Math.max(10, headlineFontSize);
 
+            if (holder.view != null) {
+                holder.view.setBackgroundColor(0xFF0D0D0D);
+            }
+
             if (holder.title != null) {
                 holder.title.setText(feed.title);
                 holder.title.setTextSize(TypedValue.COMPLEX_UNIT_SP, feedFontSize);
                 holder.title.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
                 holder.title.setTextColor(ColorStateList.valueOf(0xFFFFEB3B));
+                holder.title.setBackgroundColor(0xFF0D0D0D);
                 holder.title.setAlpha(feed.update_interval == -1 ? 0.5f : 1f);
             }
 
@@ -403,6 +411,7 @@ public class FeedsFragment extends Fragment implements OnSharedPreferenceChangeL
                 holder.unreadCounter.setTextSize(TypedValue.COMPLEX_UNIT_SP, feedFontSize);
                 holder.unreadCounter.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
                 holder.unreadCounter.setTextColor(ColorStateList.valueOf(0xFFFFEB3B));
+                holder.unreadCounter.setBackgroundColor(0xFF0D0D0D);
                 holder.unreadCounter.setVisibility((feed.unread > 0) ? View.VISIBLE : View.INVISIBLE);
             }
 

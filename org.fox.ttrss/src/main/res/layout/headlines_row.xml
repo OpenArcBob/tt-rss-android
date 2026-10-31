@@ -7,10 +7,12 @@
     android:layout_marginEnd="8dp"
     android:layout_marginTop="8dp"
     app:strokeWidth="0dp"
+    app:cardBackgroundColor="#0D0D0D"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <TableLayout
+        android:background="#0D0D0D"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
@@ -18,11 +20,13 @@
         android:stretchColumns="0,1">
 
         <TableRow
+            android:background="#0D0D0D"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:id="@+id/headline_header"
+                android:background="#0D0D0D"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
@@ -95,6 +99,7 @@
         </TableRow>
 
         <TableRow
+            android:background="#0D0D0D"
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
@@ -168,6 +173,7 @@
         </TableRow>
 
         <TableRow
+            android:background="#0D0D0D"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
@@ -187,11 +193,13 @@
         </TableRow>
 
         <TableRow
+            android:background="#0D0D0D"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
             <LinearLayout
                 android:id="@+id/headline_footer"
+                android:background="#0D0D0D"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_span="2"

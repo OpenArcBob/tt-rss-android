@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:id="@+id/headlines_fragment"
+	android:background="#0D0D0D"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
     	android:id="@+id/headlines_swipe_container"
+    	android:background="#0D0D0D"
     	android:layout_width="match_parent"
     	android:layout_height="match_parent" >
     
 	   <org.fox.ttrss.util.ContextMenuRecyclerView
 	       android:id="@+id/headlines_list"
-		   android:background="?colorSurfaceContainer"
+		   android:background="#0D0D0D"
 		   android:scrollbars="vertical"
 	       android:layout_width="match_parent"
 	       android:layout_height="match_parent" />

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
@@ -271,6 +272,8 @@ public class ArticleFragment extends androidx.fragment.app.Fragment {
 
         renderContent(savedInstanceState);
 
+        view.setBackgroundColor(0xFF0D0D0D);
+
         return view;
     }
 
@@ -284,12 +287,22 @@ public class ArticleFragment extends androidx.fragment.app.Fragment {
         ws.setBuiltInZoomControls(true);
         ws.setDisplayZoomControls(false);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            ws.setForceDark(WebSettings.FORCE_DARK_OFF);
+        }
+        if (Build.VERSION.SDK_INT >= 33) {
+            ws.setAlgorithmicDarkeningAllowed(false);
+        }
+
         String textColor = "#FFEB3B";
         String linkHexColor = "#FFEB3B";
         String bgColor = "#0D0D0D";
-        String cssOverride = "html, body { color : " + textColor + " !important; background-color: " + bgColor + " !important; font-family: sans-serif !important; }";
-        cssOverride += " * { font-family: sans-serif !important; background-color: " + bgColor + " !important; color: " + textColor + " !important; }";
-        cssOverride += " a:link, a:visited, a:hover, a:active { color: " + linkHexColor + " !important; background-color: " + bgColor + " !important; }";
+        String cssOverride = ":root { color-scheme: light !important; background: " + bgColor + " !important; background-color: " + bgColor + " !important; color: " + textColor + " !important; }";
+        cssOverride += " html, body { color : " + textColor + " !important; background: " + bgColor + " !important; background-color: " + bgColor + " !important; font-family: sans-serif !important; }";
+        cssOverride += " * { font-family: sans-serif !important; background: " + bgColor + " !important; background-color: " + bgColor + " !important; color: " + textColor + " !important; border-color: #333333 !important; }";
+        cssOverride += " p, div, span, h1, h2, h3, h4, h5, h6, table, tr, td, th, ul, ol, li, pre, code, blockquote, a, article, section, header, footer, main, aside, nav, font, b, strong, i, em, u, mark, small { background: " + bgColor + " !important; background-color: " + bgColor + " !important; color: " + textColor + " !important; }";
+        cssOverride += " ::selection { background: " + bgColor + " !important; background-color: " + bgColor + " !important; color: " + textColor + " !important; }";
+        cssOverride += " a:link, a:visited, a:hover, a:active { color: " + linkHexColor + " !important; background: " + bgColor + " !important; background-color: " + bgColor + " !important; }";
 
         String articleContent = m_article.content;
 
@@ -314,8 +327,9 @@ public class ArticleFragment extends androidx.fragment.app.Fragment {
                 "<head>" +
                 "<meta content=\"text/html; charset=utf-8\" http-equiv=\"content-type\">" +
                 "<meta name=\"viewport\" content=\"width=device-width\" />" +
+                "<meta name=\"color-scheme\" content=\"light\">" +
                 "<style type=\"text/css\">" +
-                "body { padding : 0px; margin : " + margin8dp + "px; line-height : 1.3; word-wrap: break-word; background-color: " + bgColor + "; }" +
+                "body { padding : 0px; margin : " + margin8dp + "px; line-height : 1.3; word-wrap: break-word; background: " + bgColor + "; background-color: " + bgColor + "; }" +
                 "h1, h2, h3, h4, h5, h6 { line-height: 1; text-align: initial; }" +
                 "img, video, iframe { max-width : 100%; width : auto; height : auto; }" +
                 "img, video { object-fit : contain }" +

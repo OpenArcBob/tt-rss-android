@@ -11,7 +11,11 @@ import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.text.Layout;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.TextPaint;
+import android.text.style.BackgroundColorSpan;
 import android.util.AttributeSet;
 
 import androidx.annotation.NonNull;
@@ -21,9 +25,8 @@ import com.google.android.material.textview.MaterialTextView;
 
 /**
  * A TextView that unconditionally forces Samsung High Contrast Yellow (#FFEB3B)
- * and bypasses system/OEM high-contrast font hooks (which forcefully override text
- * to white with black outline in hardware-accelerated HWUI rendering) by rendering
- * glyph geometry directly as vector Paths or via an offscreen software bitmap.
+ * on a solid #0D0D0D background, completely eliminating system-injected black outlines,
+ * shadows, or background spans directly under text.
  */
 public class HighContrastTextView extends MaterialTextView {
 
@@ -53,6 +56,26 @@ public class HighContrastTextView extends MaterialTextView {
         super.setTextColor(ColorStateList.valueOf(HIGH_CONTRAST_YELLOW));
         super.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.NORMAL));
         super.setBackgroundColor(HIGH_CONTRAST_BG);
+        super.setShadowLayer(0, 0, 0, 0);
+        super.setHighlightColor(0x66FFEB3B);
+    }
+
+    @Override
+    public void setShadowLayer(float radius, float dx, float dy, int color) {
+        super.setShadowLayer(0, 0, 0, 0);
+    }
+
+    @Override
+    public void setText(CharSequence text, BufferType type) {
+        if (text instanceof Spanned) {
+            Spannable spannable = (text instanceof Spannable) ? (Spannable) text : new SpannableString(text);
+            BackgroundColorSpan[] bgSpans = spannable.getSpans(0, spannable.length(), BackgroundColorSpan.class);
+            for (BackgroundColorSpan span : bgSpans) {
+                spannable.removeSpan(span);
+            }
+            text = spannable;
+        }
+        super.setText(text, type);
     }
 
     @Override
@@ -117,6 +140,11 @@ public class HighContrastTextView extends MaterialTextView {
                 TextPaint paint = getPaint();
                 paint.setColor(HIGH_CONTRAST_YELLOW);
                 paint.setStyle(Paint.Style.FILL);
+                paint.clearShadowLayer();
+                paint.bgColor = HIGH_CONTRAST_BG;
+                paint.setShader(null);
+                paint.setColorFilter(null);
+                paint.setMaskFilter(null);
                 paint.setTypeface(Typeface.create(Typeface.SANS_SERIF, paint.getTypeface() != null ? paint.getTypeface().getStyle() : Typeface.NORMAL));
 
                 int saveCount = canvas.save();
@@ -134,22 +162,30 @@ public class HighContrastTextView extends MaterialTextView {
                     float x = layout.getLineLeft(i);
                     float baseline = layout.getLineBaseline(i);
 
-                    if (ellipsisCount > 0) {
-                        int ellipsisStart = layout.getEllipsisStart(i);
-                        int visibleEnd = start + ellipsisStart;
-                        if (visibleEnd > start && visibleEnd <= textStr.length()) {
+                    try {
+                        if (ellipsisCount > 0) {
+                            int ellipsisStart = layout.getEllipsisStart(i);
+                            int visibleEnd = start + ellipsisStart;
+                            if (visibleEnd > start && visibleEnd <= textStr.length()) {
+                                mTextPath.reset();
+                                paint.getTextPath(textStr, start, visibleEnd, x, baseline, mTextPath);
+                                canvas.drawPath(mTextPath, paint);
+                            }
+                            float ellipsisX = x + (visibleEnd > start ? layout.getPrimaryHorizontal(visibleEnd) - x : 0);
                             mTextPath.reset();
-                            paint.getTextPath(textStr, start, visibleEnd, x, baseline, mTextPath);
+                            paint.getTextPath("\u2026", 0, 1, ellipsisX, baseline, mTextPath);
+                            canvas.drawPath(mTextPath, paint);
+                        } else if (end > start && end <= textStr.length()) {
+                            mTextPath.reset();
+                            paint.getTextPath(textStr, start, end, x, baseline, mTextPath);
                             canvas.drawPath(mTextPath, paint);
                         }
-                        float ellipsisX = x + (visibleEnd > start ? layout.getPrimaryHorizontal(visibleEnd) - x : 0);
-                        mTextPath.reset();
-                        paint.getTextPath("\u2026", 0, 1, ellipsisX, baseline, mTextPath);
-                        canvas.drawPath(mTextPath, paint);
-                    } else if (end > start && end <= textStr.length()) {
-                        mTextPath.reset();
-                        paint.getTextPath(textStr, start, end, x, baseline, mTextPath);
-                        canvas.drawPath(mTextPath, paint);
+                    } catch (Throwable lineError) {
+                        paint.clearShadowLayer();
+                        paint.bgColor = HIGH_CONTRAST_BG;
+                        if (end > start && end <= textStr.length()) {
+                            canvas.drawText(textStr, start, end, x, baseline, paint);
+                        }
                     }
                 }
 
@@ -173,6 +209,8 @@ public class HighContrastTextView extends MaterialTextView {
             }
 
             mBitmap.eraseColor(HIGH_CONTRAST_BG);
+            getPaint().clearShadowLayer();
+            getPaint().bgColor = HIGH_CONTRAST_BG;
 
             int scrollX = getScrollX();
             int scrollY = getScrollY();

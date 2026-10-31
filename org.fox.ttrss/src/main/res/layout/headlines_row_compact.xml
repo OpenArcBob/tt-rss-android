@@ -11,6 +11,7 @@
     android:paddingEnd="8dp"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:background="#0D0D0D"
     android:orientation="horizontal">
 
     <FrameLayout
@@ -39,6 +40,7 @@
     <LinearLayout
         android:layout_weight="1"
         android:orientation="vertical"
+        android:background="#0D0D0D"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

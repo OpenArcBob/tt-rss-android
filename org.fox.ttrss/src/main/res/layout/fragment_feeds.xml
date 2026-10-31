@@ -4,11 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/feeds_fragment"
+    android:background="#0D0D0D"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:background="@null"
+        android:background="#0D0D0D"
         android:layout_width="match_parent"
         android:layout_height="8dp">
 
@@ -32,6 +33,7 @@
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/feeds_swipe_container"
+        android:background="#0D0D0D"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -40,6 +42,7 @@
 
     <org.fox.ttrss.util.ContextMenuRecyclerView
         android:id="@+id/feeds"
+        android:background="#0D0D0D"
         android:scrollbars="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

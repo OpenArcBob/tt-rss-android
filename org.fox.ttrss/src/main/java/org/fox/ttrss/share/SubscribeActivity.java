@@ -325,7 +325,12 @@ public class SubscribeActivity extends CommonShareActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             View v = super.getView(position, convertView, parent);
             if (v instanceof TextView) {
-                ((TextView) v).setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+                TextView tv = (TextView) v;
+                tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+                tv.setTextColor(0xFFFFEB3B);
+                tv.setBackgroundColor(0xFF0D0D0D);
+            } else if (v != null) {
+                v.setBackgroundColor(0xFF0D0D0D);
             }
             return v;
         }
@@ -334,7 +339,12 @@ public class SubscribeActivity extends CommonShareActivity {
         public View getDropDownView(int position, View convertView, ViewGroup parent) {
             View v = super.getDropDownView(position, convertView, parent);
             if (v instanceof TextView) {
-                ((TextView) v).setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+                TextView tv = (TextView) v;
+                tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+                tv.setTextColor(0xFFFFEB3B);
+                tv.setBackgroundColor(0xFF0D0D0D);
+            } else if (v != null) {
+                v.setBackgroundColor(0xFF0D0D0D);
             }
             return v;
         }
@@ -373,7 +383,12 @@ public class SubscribeActivity extends CommonShareActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             View v = super.getView(position, convertView, parent);
             if (v instanceof TextView) {
-                ((TextView) v).setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+                TextView tv = (TextView) v;
+                tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+                tv.setTextColor(0xFFFFEB3B);
+                tv.setBackgroundColor(0xFF0D0D0D);
+            } else if (v != null) {
+                v.setBackgroundColor(0xFF0D0D0D);
             }
             return v;
         }
@@ -382,7 +397,12 @@ public class SubscribeActivity extends CommonShareActivity {
         public View getDropDownView(int position, View convertView, ViewGroup parent) {
             View v = super.getDropDownView(position, convertView, parent);
             if (v instanceof TextView) {
-                ((TextView) v).setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+                TextView tv = (TextView) v;
+                tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+                tv.setTextColor(0xFFFFEB3B);
+                tv.setBackgroundColor(0xFF0D0D0D);
+            } else if (v != null) {
+                v.setBackgroundColor(0xFF0D0D0D);
             }
             return v;
         }

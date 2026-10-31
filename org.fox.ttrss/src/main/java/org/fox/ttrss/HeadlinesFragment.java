@@ -268,8 +268,10 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
             m_maxTextLayoutMode = true;
 
         View view = inflater.inflate(R.layout.fragment_headlines, container, false);
+        view.setBackgroundColor(0xFF0D0D0D);
 
         m_swipeLayout = view.findViewById(R.id.headlines_swipe_container);
+        m_swipeLayout.setBackgroundColor(0xFF0D0D0D);
 
         // see below re: viewpager2
         if (!(m_activity instanceof DetailActivity))
@@ -278,6 +280,7 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
             m_swipeLayout.setEnabled(false);
 
         m_list = view.findViewById(R.id.headlines_list);
+        m_list.setBackgroundColor(0xFF0D0D0D);
         registerForContextMenu(m_list);
 
         m_layoutManager = new LinearLayoutManager(m_activity.getApplicationContext());
@@ -779,11 +782,11 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
             m_cslTertiary = ColorStateList.valueOf(m_colorTertiary);
             m_cslPrimary = ColorStateList.valueOf(m_colorPrimary);
 
-            m_colorSurfaceContainerLowest = colorFromAttr(R.attr.colorSurfaceContainerLowest);
-            m_colorSurface = colorFromAttr(R.attr.colorSurface);
+            m_colorSurfaceContainerLowest = 0xFF0D0D0D;
+            m_colorSurface = 0xFF0D0D0D;
             m_colorOnSurface = 0xFFFFEB3B;
 
-            m_colorTertiaryContainer = colorFromAttr(R.attr.colorTertiaryContainer);
+            m_colorTertiaryContainer = 0xFF0D0D0D;
             m_colorOnTertiaryContainer = 0xFFFFEB3B;
 
             m_headlineFontSize = m_prefs.getInt("headlines_font_size_sp_int", 14);

@@ -7,10 +7,12 @@
     android:layout_marginEnd="8dp"
     android:layout_marginTop="8dp"
     app:strokeWidth="0dp"
+    app:cardBackgroundColor="#0D0D0D"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:background="#0D0D0D"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -19,6 +21,7 @@
         <!-- Header with title and metadata -->
         <RelativeLayout
             android:id="@+id/headline_header"
+            android:background="#0D0D0D"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp">
@@ -89,6 +92,7 @@
 
         <!-- Content area: 50/50 split with image on left, text on right -->
         <LinearLayout
+            android:background="#0D0D0D"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -196,6 +200,7 @@
         <!-- Footer with action buttons -->
         <LinearLayout
             android:id="@+id/headline_footer"
+            android:background="#0D0D0D"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"

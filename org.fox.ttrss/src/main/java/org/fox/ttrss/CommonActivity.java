@@ -18,6 +18,7 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
@@ -213,7 +214,15 @@ public class CommonActivity extends AppCompatActivity implements SharedPreferenc
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        m_prefs = PreferenceManager
+                .getDefaultSharedPreferences(getApplicationContext());
+        setAppTheme(m_prefs);
+
         EdgeToEdge.enable(this);
+        getWindow().setBackgroundDrawable(new ColorDrawable(0xFF0D0D0D));
+        if (getWindow().getDecorView() != null) {
+            getWindow().getDecorView().setBackgroundColor(0xFF0D0D0D);
+        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationManager nmgr = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -234,9 +243,6 @@ public class CommonActivity extends AppCompatActivity implements SharedPreferenc
             channel.setSound(null, null);
             nmgr.createNotificationChannel(channel);
         }
-
-        m_prefs = PreferenceManager
-                .getDefaultSharedPreferences(getApplicationContext());
 
         m_prefs.registerOnSharedPreferenceChangeListener(this);
 

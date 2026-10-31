@@ -29,6 +29,7 @@
 
     <application
         android:name=".Application"
+        android:theme="@style/AppTheme.YellowBlack"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="${appIcon}"

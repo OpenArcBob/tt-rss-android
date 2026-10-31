@@ -5,11 +5,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     app:strokeWidth="0dp"
-    app:cardBackgroundColor="?colorTertiaryContainer"
+    app:cardBackgroundColor="#0D0D0D"
     android:layout_height="wrap_content">
 
     <LinearLayout
         android:id="@+id/feeds_row"
+        android:background="#0D0D0D"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:descendantFocusability="blocksDescendants"
