@@ -391,8 +391,7 @@ public class FeedsFragment extends Fragment implements OnSharedPreferenceChangeL
             }
 
             int headlineFontSize = m_prefs != null ? m_prefs.getInt("headlines_font_size_sp_int", 14) : 14;
-            int feedFontSize = Math.max(10, headlineFontSize);
-            int categoryFontSize = Math.max(10, Math.min(21, headlineFontSize + 3));
+            int feedHeadlineFontSize = Math.max(10, Math.min(21, headlineFontSize + 3));
 
             if (holder.view != null) {
                 holder.view.setBackgroundColor(0xFF0D0D0D);
@@ -400,13 +399,8 @@ public class FeedsFragment extends Fragment implements OnSharedPreferenceChangeL
 
             if (holder.title != null) {
                 holder.title.setText(feed.title);
-                if (feed.is_cat) {
-                    holder.title.setTextSize(TypedValue.COMPLEX_UNIT_SP, categoryFontSize);
-                    holder.title.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
-                } else {
-                    holder.title.setTextSize(TypedValue.COMPLEX_UNIT_SP, feedFontSize);
-                    holder.title.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
-                }
+                holder.title.setTextSize(TypedValue.COMPLEX_UNIT_SP, feedHeadlineFontSize);
+                holder.title.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
                 holder.title.setTextColor(ColorStateList.valueOf(0xFFFFEB3B));
                 holder.title.setBackgroundColor(0xFF0D0D0D);
                 holder.title.setAlpha(feed.update_interval == -1 ? 0.5f : 1f);
@@ -414,13 +408,8 @@ public class FeedsFragment extends Fragment implements OnSharedPreferenceChangeL
 
             if (holder.unreadCounter != null) {
                 holder.unreadCounter.setText(String.valueOf(feed.unread));
-                if (feed.is_cat) {
-                    holder.unreadCounter.setTextSize(TypedValue.COMPLEX_UNIT_SP, categoryFontSize);
-                    holder.unreadCounter.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
-                } else {
-                    holder.unreadCounter.setTextSize(TypedValue.COMPLEX_UNIT_SP, feedFontSize);
-                    holder.unreadCounter.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
-                }
+                holder.unreadCounter.setTextSize(TypedValue.COMPLEX_UNIT_SP, feedHeadlineFontSize);
+                holder.unreadCounter.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
                 holder.unreadCounter.setTextColor(ColorStateList.valueOf(0xFFFFEB3B));
                 holder.unreadCounter.setBackgroundColor(0xFF0D0D0D);
                 holder.unreadCounter.setVisibility((feed.unread > 0) ? View.VISIBLE : View.INVISIBLE);

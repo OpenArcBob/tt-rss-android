@@ -1293,7 +1293,8 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
 
             if (holder.feedTitleView != null) {
                 if (article.feed_title != null && m_feed != null && (m_feed.is_cat || m_feed.id < 0)) {
-                    holder.feedTitleView.setTextSize(TypedValue.COMPLEX_UNIT_SP, m_headlineSmallFontSize);
+                    holder.feedTitleView.setTextSize(TypedValue.COMPLEX_UNIT_SP, Math.min(21, m_headlineFontSize + 3));
+                    holder.feedTitleView.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
                     holder.feedTitleView.setText(article.feed_title);
                 } else {
                     holder.feedTitleView.setVisibility(View.GONE);
