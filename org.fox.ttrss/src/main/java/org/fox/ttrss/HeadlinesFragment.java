@@ -42,7 +42,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 import androidx.core.os.BundleCompat;
 import androidx.core.text.HtmlCompat;
 import androidx.core.view.ViewCompat;
@@ -727,10 +726,7 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
         private final int m_colorSurface;
         private final int m_colorPrimary;
         private final int m_colorTertiary;
-        private final int m_colorSecondary;
-        private final int m_colorOnSurface;
         private final int m_colorTertiaryContainer;
-        private final int m_colorOnTertiaryContainer;
 
         boolean m_flavorImageEnabled;
         private final int m_screenWidth;
@@ -759,12 +755,6 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
             return false;
         }
 
-        private int colorFromAttr(int attr) {
-            TypedValue tv = new TypedValue();
-            m_activity.getTheme().resolveAttribute(attr, tv, true);
-            return tv.resourceId != 0 ? ContextCompat.getColor(m_activity, tv.resourceId) : tv.data;
-        }
-
         public ArticleListAdapter() {
             super(new ArticleDiffItemCallback());
 
@@ -776,7 +766,6 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
             m_flavorImageEnabled = "HL_DEFAULT".equals(headlineMode) || "HL_COMPACT".equals(headlineMode) || "HL_SPLIT".equals(headlineMode);
 
             m_colorPrimary = 0xFFFFEB3B;
-            m_colorSecondary = 0xFFFFEB3B;
             m_colorTertiary = 0xFFFFEB3B;
 
             m_cslTertiary = ColorStateList.valueOf(m_colorTertiary);
@@ -784,10 +773,8 @@ public class HeadlinesFragment extends androidx.fragment.app.Fragment {
 
             m_colorSurfaceContainerLowest = 0xFF0D0D0D;
             m_colorSurface = 0xFF0D0D0D;
-            m_colorOnSurface = 0xFFFFEB3B;
 
             m_colorTertiaryContainer = 0xFF0D0D0D;
-            m_colorOnTertiaryContainer = 0xFFFFEB3B;
 
             m_headlineFontSize = m_prefs.getInt("headlines_font_size_sp_int", 14);
             m_headlineSmallFontSize = Math.max(10, Math.min(18, m_headlineFontSize - 2));

@@ -17,6 +17,7 @@ import android.text.Spanned;
 import android.text.TextPaint;
 import android.text.style.BackgroundColorSpan;
 import android.util.AttributeSet;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -202,7 +203,9 @@ public class HighContrastTextView extends MaterialTextView {
 
                 canvas.restoreToCount(saveCount);
                 return;
-            } catch (Throwable ignored) {
+            } catch (Throwable fallbackException) {
+                // Fall back to offscreen software bitmap rendering below if layout path drawing fails.
+                Log.d("HighContrastTextView", "Layout path drawing failed, falling back to bitmap", fallbackException);
             }
         }
 
