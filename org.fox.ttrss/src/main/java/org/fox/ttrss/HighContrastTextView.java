@@ -36,6 +36,7 @@ public class HighContrastTextView extends MaterialTextView {
     private final Path mTextPath = new Path();
     private Bitmap mBitmap;
     private Canvas mBitmapCanvas;
+    private int mStyle = Typeface.NORMAL;
 
     public HighContrastTextView(@NonNull Context context) {
         super(context);
@@ -53,8 +54,11 @@ public class HighContrastTextView extends MaterialTextView {
     }
 
     private void init() {
+        if (getTypeface() != null) {
+            mStyle = getTypeface().getStyle();
+        }
         super.setTextColor(ColorStateList.valueOf(HIGH_CONTRAST_YELLOW));
-        super.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.NORMAL));
+        super.setTypeface(Typeface.create(Typeface.SANS_SERIF, mStyle), mStyle);
         super.setBackgroundColor(HIGH_CONTRAST_BG);
         super.setShadowLayer(0, 0, 0, 0);
         super.setHighlightColor(0x66FFEB3B);
@@ -105,13 +109,14 @@ public class HighContrastTextView extends MaterialTextView {
 
     @Override
     public void setTypeface(@Nullable Typeface tf, int style) {
+        mStyle = style;
         super.setTypeface(Typeface.create(Typeface.SANS_SERIF, style), style);
     }
 
     @Override
     public void setTypeface(@Nullable Typeface tf) {
-        int style = tf != null ? tf.getStyle() : Typeface.NORMAL;
-        super.setTypeface(Typeface.create(Typeface.SANS_SERIF, style));
+        mStyle = tf != null ? tf.getStyle() : Typeface.NORMAL;
+        super.setTypeface(Typeface.create(Typeface.SANS_SERIF, mStyle), mStyle);
     }
 
     @Override
@@ -134,6 +139,11 @@ public class HighContrastTextView extends MaterialTextView {
             return;
         }
 
+        int effectiveStyle = mStyle;
+        if (getTypeface() != null && getTypeface().isBold()) {
+            effectiveStyle |= Typeface.BOLD;
+        }
+
         Layout layout = getLayout();
         if (layout != null) {
             try {
@@ -145,7 +155,8 @@ public class HighContrastTextView extends MaterialTextView {
                 paint.setShader(null);
                 paint.setColorFilter(null);
                 paint.setMaskFilter(null);
-                paint.setTypeface(Typeface.create(Typeface.SANS_SERIF, paint.getTypeface() != null ? paint.getTypeface().getStyle() : Typeface.NORMAL));
+                paint.setTypeface(Typeface.create(Typeface.SANS_SERIF, effectiveStyle));
+                paint.setFakeBoldText((effectiveStyle & Typeface.BOLD) != 0);
 
                 int saveCount = canvas.save();
                 canvas.translate(getCompoundPaddingLeft(), getExtendedPaddingTop());
@@ -211,6 +222,8 @@ public class HighContrastTextView extends MaterialTextView {
             mBitmap.eraseColor(HIGH_CONTRAST_BG);
             getPaint().clearShadowLayer();
             getPaint().bgColor = HIGH_CONTRAST_BG;
+            getPaint().setTypeface(Typeface.create(Typeface.SANS_SERIF, effectiveStyle));
+            getPaint().setFakeBoldText((effectiveStyle & Typeface.BOLD) != 0);
 
             int scrollX = getScrollX();
             int scrollY = getScrollY();

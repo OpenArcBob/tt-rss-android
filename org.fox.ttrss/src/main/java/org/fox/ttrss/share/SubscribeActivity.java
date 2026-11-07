@@ -3,6 +3,7 @@ package org.fox.ttrss.share;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
@@ -94,10 +95,11 @@ public class SubscribeActivity extends CommonShareActivity {
         Spinner catList = findViewById(R.id.category_spinner);
 
         int headlineFontSize = m_prefs != null ? m_prefs.getInt("headlines_font_size_sp_int", 14) : 14;
+        int feedHeadlineFontSize = Math.max(10, Math.min(21, headlineFontSize + 3));
 
         if (m_cats.isEmpty()) m_cats.add(new Feed(0, "Uncategorized", true));
 
-        m_catAdapter = new CatListAdapter(this, android.R.layout.simple_spinner_dropdown_item, m_cats, headlineFontSize);
+        m_catAdapter = new CatListAdapter(this, android.R.layout.simple_spinner_dropdown_item, m_cats, feedHeadlineFontSize);
         catList.setAdapter(m_catAdapter);
 
         final Spinner feedList = findViewById(R.id.feed_spinner);
@@ -118,7 +120,7 @@ public class SubscribeActivity extends CommonShareActivity {
             }
         });
 
-        m_feedAdapter = new FeedListAdapter(this, android.R.layout.simple_spinner_dropdown_item, m_feeds, headlineFontSize);
+        m_feedAdapter = new FeedListAdapter(this, android.R.layout.simple_spinner_dropdown_item, m_feeds, feedHeadlineFontSize);
 
         feedList.setAdapter(m_feedAdapter);
 
@@ -327,6 +329,7 @@ public class SubscribeActivity extends CommonShareActivity {
             if (v instanceof TextView) {
                 TextView tv = (TextView) v;
                 tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+                tv.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
                 tv.setTextColor(0xFFFFEB3B);
                 tv.setBackgroundColor(0xFF0D0D0D);
             } else if (v != null) {
@@ -341,6 +344,7 @@ public class SubscribeActivity extends CommonShareActivity {
             if (v instanceof TextView) {
                 TextView tv = (TextView) v;
                 tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+                tv.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
                 tv.setTextColor(0xFFFFEB3B);
                 tv.setBackgroundColor(0xFF0D0D0D);
             } else if (v != null) {
@@ -385,6 +389,7 @@ public class SubscribeActivity extends CommonShareActivity {
             if (v instanceof TextView) {
                 TextView tv = (TextView) v;
                 tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+                tv.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
                 tv.setTextColor(0xFFFFEB3B);
                 tv.setBackgroundColor(0xFF0D0D0D);
             } else if (v != null) {
@@ -399,6 +404,7 @@ public class SubscribeActivity extends CommonShareActivity {
             if (v instanceof TextView) {
                 TextView tv = (TextView) v;
                 tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, m_fontSize);
+                tv.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
                 tv.setTextColor(0xFFFFEB3B);
                 tv.setBackgroundColor(0xFF0D0D0D);
             } else if (v != null) {
