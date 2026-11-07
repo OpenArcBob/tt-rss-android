@@ -61,7 +61,7 @@ jobs:
         fi
 
     - name: Upload APK
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
         name: tt-rss-android-${{ github.sha }}
         path: build/apk-release/*.apk
